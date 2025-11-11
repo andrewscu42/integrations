@@ -1,4 +1,11 @@
-public class stripeCreateCustomer implements Queueable {
+/** 
+ * @description       : Use Queueable to create Stripe customers with minimal fields
+ *  to reduce payload size. Idempotent check prevents duplicate Stripe customer creation.
+ *
+ * @author            : Andrew Scullion
+**/
+
+public class stripeCreateCustomer implements Queueable, Database.AllowsCallouts {
     
     private Set<Id> contactIds;
     

@@ -25,7 +25,7 @@ if (existingContacts.isEmpty()) {
     }
     
     // Collect Contact IDs
-    List<Id> contactIds = new List<Id>();
+    Set<Id> contactIds = new Set<Id>();
     for (Contact c : existingContacts) {
         contactIds.add(c.Id);
     }
@@ -34,12 +34,12 @@ if (existingContacts.isEmpty()) {
     System.debug('=== Sending Contacts to Stripe ===');
     System.debug('Contact IDs to process: ' + contactIds);
     
-    // Call the @future method to send contacts to Stripe
+    // Call the Queueable method to send contacts to Stripe
     stripeCreateCustomer.createCustomersFromContacts(contactIds);
     
     System.debug('');
     System.debug('=== Process Initiated ===');
-    System.debug('The @future method has been queued.');
+    System.debug('The Queueable job has been enqueued.');
     System.debug('Check Debug Logs for async execution results.');
     System.debug('Stripe customers will be created asynchronously.');
     System.debug('');
