@@ -108,7 +108,6 @@ private class stripeCreateCustomerTest {
     @isTest
     static void customerWithSameEmailExists() {
         List<Contact> contacts = [SELECT Id, Stripe_Customer_ID__c FROM Contact WHERE Email = 'john.doe@example.com'];
-        // Clear the Stripe Customer ID to simulate a contact that hasn't been synced yet
         contacts[0].Stripe_Customer_ID__c = null;
         update contacts[0];
         

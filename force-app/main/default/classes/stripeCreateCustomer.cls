@@ -49,7 +49,7 @@ public class stripeCreateCustomer implements Queueable, Database.AllowsCallouts 
         Http http = new Http();
         HttpResponse res = http.send(req);
         
-        if (res.getStatusCode() == 200) {
+        if (isSuccessStatusCode(res.getStatusCode())) {
             Map<String, Object> responseMap = (Map<String, Object>) JSON.deserializeUntyped(res.getBody());
             return (String) responseMap.get('id');
         }
@@ -81,23 +81,19 @@ public class stripeCreateCustomer implements Queueable, Database.AllowsCallouts 
         return String.join(params, '&');
     }
     
+    private static Boolean isSuccessStatusCode(Integer statusCode) {
+        return statusCode >= 200 && statusCode < 300;
+    }
+    
     public static void createCustomersFromContacts(Set<Id> contactIds) {
         System.enqueueJob(new stripeCreateCustomer(contactIds));
     }
     
-    /**
-     * @description Processes a list of contacts by checking if a Stripe customer exists by email.
-     * @param contacts List of Contact records to process (max 100)
-     * @throws EmptyContactListException if contacts list is null or empty
-     * @throws MissingRequiredFieldException if any contact is missing required fields (Email)
-     */
     public static void processContacts(List<Contact> contacts) {
-        // Validate contact list
         if (contacts == null || contacts.isEmpty()) {
             throw new EmptyContactListException('The contact list cannot be null or empty.');
         }
         
-        // Validate required fields for each contact
         for (Contact contact : contacts) {
             if (String.isBlank(contact.Email)) {
                 throw new MissingRequiredFieldException(
@@ -109,61 +105,40 @@ public class stripeCreateCustomer implements Queueable, Database.AllowsCallouts 
         List<Contact> contactsToUpdate = new List<Contact>();
         
         for (Contact contact : contacts) {
-            String stripeCustomerId = findStripeCustomerByEmail(contact.Email);
+            String stripeCustomerId = findStripeCustomerIdByEmail(contact.Email);
             
-            if (stripeCustomerId != null) {
-                updateStripeCustomer(stripeCustomerId, contact);
-                contact.Stripe_Customer_ID__c = stripeCustomerId;
-            } else {
+            if (stripeCustomerId == null) {
                 stripeCustomerId = createStripeCustomer(contact);
-                if (stripeCustomerId != null) {
-                    contact.Stripe_Customer_ID__c = stripeCustomerId;
-                }
-            }
-            if (contact.Stripe_Customer_ID__c != null) {
-                contactsToUpdate.add(contact);
-            }
-        }
         
+            } else {
+                updateStripeCustomer(stripeCustomerId, contact);
+            }
+            contact.Stripe_Customer_ID__c = stripeCustomerId;
+            contactsToUpdate.add(contact);
+        }
         update contactsToUpdate;
     }
-    
-    /**
-     * @description Searches for a Stripe customer by email address
-     * @param email Email address to search for
-     * @return Stripe Customer ID if found, null otherwise
-     */
-    private static String findStripeCustomerByEmail(String email) {
+
+    private static String findStripeCustomerIdByEmail(String email) {
         HttpRequest req = new HttpRequest();
-        // Use Stripe's search API to find customers by email
         String query = 'email:\'' + email + '\'';
         req.setEndpoint('callout:Stripe_API/v1/customers/search?query=' + EncodingUtil.urlEncode(query, 'UTF-8'));
         req.setMethod('GET');
-        
         Http http = new Http();
         HttpResponse res = http.send(req);
-        
-        if (res.getStatusCode() == 200) {
-            Map<String, Object> responseMap = (Map<String, Object>) JSON.deserializeUntyped(res.getBody());
-            List<Object> data = (List<Object>) responseMap.get('data');
-            
-            // If customers found, return the first one's ID
-            if (data != null && !data.isEmpty()) {
-                Map<String, Object> customer = (Map<String, Object>) data[0];
-                return (String) customer.get('id');
-            }
+        if (!isSuccessStatusCode(res.getStatusCode())) {
+            return null;
         }
-        
-        return null;
+        Map<String, Object> responseMap = (Map<String, Object>) JSON.deserializeUntyped(res.getBody());
+        List<Object> data = (List<Object>) responseMap.get('data');
+        if (data == null || data.isEmpty()) {
+            return null;
+        }
+        Map<String, Object> customer = (Map<String, Object>) data[0];
+        return (String) customer.get('id');
     }
     
-    /**
-     * @description Updates an existing Stripe customer with contact data
-     * @param stripeCustomerId The Stripe Customer ID to update
-     * @param contact Contact record containing data to update
-     * @return Updated Stripe Customer ID if successful, null otherwise
-     */
-    private static String updateStripeCustomer(String stripeCustomerId, Contact contact) {
+    private static String updateStripeCustomerId(String stripeCustomerId, Contact contact) {
         String body = buildRequestBody(contact);
         HttpRequest req = new HttpRequest();
         req.setEndpoint('callout:Stripe_API/v1/customers/' + stripeCustomerId);
@@ -174,7 +149,7 @@ public class stripeCreateCustomer implements Queueable, Database.AllowsCallouts 
         Http http = new Http();
         HttpResponse res = http.send(req);
         
-        if (res.getStatusCode() == 200) {
+        if (isSuccessStatusCode(res.getStatusCode())) {
             Map<String, Object> responseMap = (Map<String, Object>) JSON.deserializeUntyped(res.getBody());
             return (String) responseMap.get('id');
         }
