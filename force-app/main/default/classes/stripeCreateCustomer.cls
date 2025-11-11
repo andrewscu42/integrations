@@ -127,7 +127,7 @@ public class stripeCreateCustomer implements Queueable, Database.AllowsCallouts 
         Http http = new Http();
         HttpResponse res = http.send(req);
         if (!isSuccessStatusCode(res.getStatusCode())) {
-            return null;
+            return 'No response from Stripe API';
         }
         Map<String, Object> responseMap = (Map<String, Object>) JSON.deserializeUntyped(res.getBody());
         List<Object> data = (List<Object>) responseMap.get('data');
@@ -138,7 +138,7 @@ public class stripeCreateCustomer implements Queueable, Database.AllowsCallouts 
         return (String) customer.get('id');
     }
     
-    private static String updateStripeCustomerId(String stripeCustomerId, Contact contact) {
+    private static String updateStripeCustomer(String stripeCustomerId, Contact contact) {
         String body = buildRequestBody(contact);
         HttpRequest req = new HttpRequest();
         req.setEndpoint('callout:Stripe_API/v1/customers/' + stripeCustomerId);
