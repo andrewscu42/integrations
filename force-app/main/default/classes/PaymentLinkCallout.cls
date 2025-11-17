@@ -5,7 +5,8 @@ public with sharing class PaymentLinkCallout {
             if (String.isBlank(contact.Email)) {
                 throw new MissingRequiredFieldException('Contact must have an email address to create a Stripe payment link.');
             }
-            String stripeCustomerId = StripeCreateCustomerQueueable.createStripeCustomer(contact);
+            StripeCreateCustomerQueueable queueable = new StripeCreateCustomerQueueable(new Set<Id>{contact.Id});
+            String stripeCustomerId = queueable.createStripeCustomer(contact);
             if (String.isBlank(stripeCustomerId)) {
                 throw new CalloutException('Failed to create Stripe customer for contact.');
             }

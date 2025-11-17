@@ -14,7 +14,8 @@ public class StripeCreateCustomerQueueable implements Queueable, Database.Allows
     }
     
     public void execute(QueueableContext context) {
-        List<Contact> contacts = queryContacts(contactIds);
+        ContactQueries contactQueries = new ContactQueries();
+        List<Contact> contacts = contactQueries.queryContactsByIds(contactIds);
         List<Contact> contactsToUpdate = new List<Contact>();
         
         for (Contact contact : contacts) {
@@ -30,11 +31,7 @@ public class StripeCreateCustomerQueueable implements Queueable, Database.Allows
         update contactsToUpdate;
     }
     
-    private List<Contact> queryContacts(Set<Id> contactIds) {
-        return ContactQueries.queryContactsByIds(contactIds);
-    }
-    
-    public static String createStripeCustomer(Contact contact) {
+    public String createStripeCustomer(Contact contact) {
         String body = buildRequestBody(contact);
         HttpRequest req = new HttpRequest();
         req.setEndpoint('callout:Stripe_API/v1/customers');
@@ -53,7 +50,7 @@ public class StripeCreateCustomerQueueable implements Queueable, Database.Allows
         return null;
     }
     
-    private static String buildRequestBody(Contact contact) {
+    private String buildRequestBody(Contact contact) {
         List<String> params = new List<String>();
         params.add('email=' + EncodingUtil.urlEncode(contact.Email, 'UTF-8'));
         
@@ -77,7 +74,7 @@ public class StripeCreateCustomerQueueable implements Queueable, Database.Allows
         return String.join(params, '&');
     }
     
-    private static Boolean isSuccessStatusCode(Integer statusCode) {
+    private Boolean isSuccessStatusCode(Integer statusCode) {
         return statusCode >= 200 && statusCode < 300;
     }
     
@@ -85,7 +82,7 @@ public class StripeCreateCustomerQueueable implements Queueable, Database.Allows
         System.enqueueJob(new StripeCreateCustomerQueueable(contactIds));
     }
     
-    public static void processContacts(List<Contact> contacts) {
+    public void processContacts(List<Contact> contacts) {
         if (contacts == null || contacts.isEmpty()) {
             throw new EmptyContactListException('The contact list cannot be null or empty.');
         }
@@ -115,7 +112,7 @@ public class StripeCreateCustomerQueueable implements Queueable, Database.Allows
         update contactsToUpdate;
     }
 
-    private static String findStripeCustomerIdByEmail(String email) {
+    private String findStripeCustomerIdByEmail(String email) {
         HttpRequest req = new HttpRequest();
         String query = 'email:\'' + email + '\'';
         req.setEndpoint('callout:Stripe_API/v1/customers/search?query=' + EncodingUtil.urlEncode(query, 'UTF-8'));
@@ -134,7 +131,7 @@ public class StripeCreateCustomerQueueable implements Queueable, Database.Allows
         return (String) customer.get('id');
     }
     
-    private static String updateStripeCustomer(String stripeCustomerId, Contact contact) {
+    private String updateStripeCustomer(String stripeCustomerId, Contact contact) {
         String body = buildRequestBody(contact);
         HttpRequest req = new HttpRequest();
         req.setEndpoint('callout:Stripe_API/v1/customers/' + stripeCustomerId);

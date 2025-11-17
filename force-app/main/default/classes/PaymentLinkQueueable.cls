@@ -10,7 +10,8 @@ public with sharing class PaymentLinkQueueable implements Queueable, Database.Al
     }
 
     public void generateLinkAndUpdateContacts() {
-        List<Contact> contactsToUpdate = ContactQueries.queryContactsByIds(contactIds);
+        ContactQueries contactQueries = new ContactQueries();
+        List<Contact> contactsToUpdate = contactQueries.queryContactsByIds(contactIds);
 
         for (Contact contact : contactsToUpdate) {
             PaymentLinkCallout linkCallout = new PaymentLinkCallout();

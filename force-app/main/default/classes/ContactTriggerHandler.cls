@@ -24,7 +24,7 @@ public class ContactTriggerHandler {
         StripeCreateCustomerQueueable.createCustomersFromContacts(contactIds);
     }
     
-    public static void generatePaymentLinks(Set<Id> contactIds) {
+    public void generatePaymentLinks(Set<Id> contactIds) {
         if (contactIds == null || contactIds.isEmpty()) {
             throw new EmptyContactListException('The contact ID set cannot be null or empty.');
         }
