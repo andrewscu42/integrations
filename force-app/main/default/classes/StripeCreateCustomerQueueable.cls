@@ -34,7 +34,7 @@ public class StripeCreateCustomerQueueable implements Queueable, Database.Allows
         return ContactQueries.queryContactsByIds(contactIds);
     }
     
-    private static String createStripeCustomer(Contact contact) {
+    public static String createStripeCustomer(Contact contact) {
         String body = buildRequestBody(contact);
         HttpRequest req = new HttpRequest();
         req.setEndpoint('callout:Stripe_API/v1/customers');
