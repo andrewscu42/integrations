@@ -5,11 +5,11 @@
  * @author            : Andrew Scullion
 **/
 
-public class stripeCreateCustomerQueueable implements Queueable, Database.AllowsCallouts {
+public class StripeCreateCustomerQueueable implements Queueable, Database.AllowsCallouts {
     
     private Set<Id> contactIds;
     
-    public stripeCreateCustomerQueueable(Set<Id> contactIds) {
+    public StripeCreateCustomerQueueable(Set<Id> contactIds) {
         this.contactIds = contactIds;
     }
     
@@ -31,11 +31,7 @@ public class stripeCreateCustomerQueueable implements Queueable, Database.Allows
     }
     
     private List<Contact> queryContacts(Set<Id> contactIds) {
-        return [
-            SELECT Id, FirstName, LastName, Email, MailingStreet, MailingPostalCode, Stripe_Customer_ID__c
-            FROM Contact
-            WHERE Id IN :contactIds
-        ];
+        return ContactQueries.queryContactsByIds(contactIds);
     }
     
     private static String createStripeCustomer(Contact contact) {
@@ -86,7 +82,7 @@ public class stripeCreateCustomerQueueable implements Queueable, Database.Allows
     }
     
     public static void createCustomersFromContacts(Set<Id> contactIds) {
-        System.enqueueJob(new stripeCreateCustomerQueueable(contactIds));
+        System.enqueueJob(new StripeCreateCustomerQueueable(contactIds));
     }
     
     public static void processContacts(List<Contact> contacts) {
@@ -157,4 +153,3 @@ public class stripeCreateCustomerQueueable implements Queueable, Database.Allows
         return null;
     }
 }
-
