@@ -1,5 +1,5 @@
 @isTest
-private class stripeCreateCustomerTest {
+private class stripeCreateCustomerQueueableTest {
     
     @TestSetup
     static void setupTestData() {
@@ -51,7 +51,7 @@ private class stripeCreateCustomerTest {
         Test.setMock(HttpCalloutMock.class, new StripeSuccessMock());
         
         Test.startTest();
-        stripeCreateCustomer.createCustomersFromContacts(contactIds);
+        stripeCreateCustomerQueueable.createCustomersFromContacts(contactIds);
         Test.stopTest();
 
         Contact updatedContact = [SELECT Stripe_Customer_ID__c FROM Contact WHERE Id = :contacts[0].Id];
@@ -66,7 +66,7 @@ private class stripeCreateCustomerTest {
         Test.setMock(HttpCalloutMock.class, new StripeFailureMock());
         
         Test.startTest();
-        stripeCreateCustomer.createCustomersFromContacts(contactIds);
+        stripeCreateCustomerQueueable.createCustomersFromContacts(contactIds);
         Test.stopTest();
         
         Contact updatedContact = [SELECT Stripe_Customer_ID__c FROM Contact WHERE Id = :contacts[0].Id];
@@ -82,7 +82,7 @@ private class stripeCreateCustomerTest {
         Test.setMock(HttpCalloutMock.class, new StripeSuccessMock());
         
         Test.startTest();
-        stripeCreateCustomer.createCustomersFromContacts(contactIds);
+        stripeCreateCustomerQueueable.createCustomersFromContacts(contactIds);
         Test.stopTest();
         
         Contact updatedContact = [SELECT Stripe_Customer_ID__c FROM Contact WHERE Id = :contacts[0].Id];
@@ -96,7 +96,7 @@ private class stripeCreateCustomerTest {
         Test.setMock(HttpCalloutMock.class, new StripeFailureMock());
         
         Test.startTest();
-        stripeCreateCustomer.createCustomersFromContacts(contactIds);
+        stripeCreateCustomerQueueable.createCustomersFromContacts(contactIds);
         Test.stopTest();
 
         
@@ -116,7 +116,7 @@ private class stripeCreateCustomerTest {
         Test.setMock(HttpCalloutMock.class, new StripeCustomerExistsMock());
         
         Test.startTest();
-        stripeCreateCustomer.createCustomersFromContacts(contactIds);
+        stripeCreateCustomerQueueable.createCustomersFromContacts(contactIds);
         Test.stopTest();
 
         Contact updatedContact = [SELECT Stripe_Customer_ID__c FROM Contact WHERE Id = :contacts[0].Id];

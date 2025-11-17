@@ -5,11 +5,11 @@
  * @author            : Andrew Scullion
 **/
 
-public class stripeCreateCustomer implements Queueable, Database.AllowsCallouts {
+public class stripeCreateCustomerQueueable implements Queueable, Database.AllowsCallouts {
     
     private Set<Id> contactIds;
     
-    public stripeCreateCustomer(Set<Id> contactIds) {
+    public stripeCreateCustomerQueueable(Set<Id> contactIds) {
         this.contactIds = contactIds;
     }
     
@@ -19,7 +19,7 @@ public class stripeCreateCustomer implements Queueable, Database.AllowsCallouts 
         
         for (Contact contact : contacts) {
             if (contact.Stripe_Customer_ID__c == null && contact.Email != null) {
-                String stripeCustomerId = stripeCreateCustomer.createStripeCustomer(contact);
+                String stripeCustomerId = createStripeCustomer(contact);
                 if (stripeCustomerId != null) {
                     contact.Stripe_Customer_ID__c = stripeCustomerId;
                     contactsToUpdate.add(contact);
@@ -86,7 +86,7 @@ public class stripeCreateCustomer implements Queueable, Database.AllowsCallouts 
     }
     
     public static void createCustomersFromContacts(Set<Id> contactIds) {
-        System.enqueueJob(new stripeCreateCustomer(contactIds));
+        System.enqueueJob(new stripeCreateCustomerQueueable(contactIds));
     }
     
     public static void processContacts(List<Contact> contacts) {
