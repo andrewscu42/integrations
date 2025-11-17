@@ -8,7 +8,7 @@ public class ContactTriggerHandler {
         for (Contact contact : newContacts) {
             contactIds.add(contact.Id);
         }
-        stripeCreateCustomerQueueable.createCustomersFromContacts(contactIds);
+        StripeCreateCustomerQueueable.createCustomersFromContacts(contactIds);
     }
     public void afterUpdate(List<Contact> newContacts, Map<Id, Contact> oldContacts) {
         if (newContacts == null || newContacts.isEmpty()) {
@@ -21,7 +21,7 @@ public class ContactTriggerHandler {
                 contactIds.add(contact.Id);
             }
         }
-        stripeCreateCustomerQueueable.createCustomersFromContacts(contactIds);
+        StripeCreateCustomerQueueable.createCustomersFromContacts(contactIds);
     }
     
     public static void generatePaymentLinks(Set<Id> contactIds) {
