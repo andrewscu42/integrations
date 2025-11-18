@@ -13,7 +13,7 @@ private class StripeCreateCustomerQueueableTest {
         insert testContact;
         
         Set<Id> contactIds = new Set<Id>{testContact.Id};
-        Test.setMock(HttpCalloutMock.class, new StripeSuccessMock());
+        Test.setMock(HttpCalloutMock.class, StripeMock.success());
         Test.startTest();
         StripeCreateCustomerQueueable.createCustomersFromContacts(contactIds);
         Test.stopTest();
@@ -35,7 +35,7 @@ private class StripeCreateCustomerQueueableTest {
         
         Set<Id> contactIds = new Set<Id>{testContact.Id};
         
-        Test.setMock(HttpCalloutMock.class, new StripeFailureMock());
+        Test.setMock(HttpCalloutMock.class, StripeMock.failure());
         Test.startTest();
         StripeCreateCustomerQueueable.createCustomersFromContacts(contactIds);
         Test.stopTest();
@@ -57,7 +57,7 @@ private class StripeCreateCustomerQueueableTest {
         String originalStripeId = testContact.Stripe_Customer_ID__c;
         Set<Id> contactIds = new Set<Id>{testContact.Id};
         
-        Test.setMock(HttpCalloutMock.class, new StripeSuccessMock());
+        Test.setMock(HttpCalloutMock.class, StripeMock.success());
         Test.startTest();
         StripeCreateCustomerQueueable.createCustomersFromContacts(contactIds);
         Test.stopTest();
@@ -88,7 +88,7 @@ private class StripeCreateCustomerQueueableTest {
         
         Set<Id> contactIds = new Set<Id>{contactNoEmail.Id, contactInvalidEmail.Id};
         
-        Test.setMock(HttpCalloutMock.class, new StripeFailureMock());
+        Test.setMock(HttpCalloutMock.class, StripeMock.failure());
         Test.startTest();
         StripeCreateCustomerQueueable.createCustomersFromContacts(contactIds);
         Test.stopTest();
@@ -117,7 +117,7 @@ private class StripeCreateCustomerQueueableTest {
         Test.getEventBus().deliver();
         
         Set<Id> contactIds = new Set<Id>{testContact.Id};
-        Test.setMock(HttpCalloutMock.class, new StripeCustomerExistsMock());
+        Test.setMock(HttpCalloutMock.class, StripeMock.customerExists());
         Test.startTest();
         StripeCreateCustomerQueueable.createCustomersFromContacts(contactIds);
         Test.stopTest();
