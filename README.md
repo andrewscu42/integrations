@@ -1,18 +1,17 @@
-# Salesforce DX Project: Next Steps
+# Salesforce–Stripe Payment Link Integration
 
-Now that you’ve created a Salesforce DX project, what’s next? Here are some documentation resources to get you started.
+This project integrates **Salesforce** (using Apex classes) with the **Stripe** payment API to create payment links for Salesforce Contacts. The integration checks for existing payment links for a given Stripe customer and, if none exist, generates a new link via a POST request to Stripe.
 
-## How Do You Plan to Deploy Your Changes?
+## Features
 
-Do you want to deploy a set of changes, or create a self-contained application? Choose a [development model](https://developer.salesforce.com/tools/vscode/en/user-guide/development-models).
+- **Apex Classes:** Handles building, sending, and parsing HTTP requests and responses to the Stripe API.
+- **Payment Link Generation:** Automatically creates secure, unique payment links tied to specific Contacts, with itemized payment details included.
+- **Error Handling:** Manages errors from Stripe, including failed requests or missing URLs.
 
-## Configure Your Salesforce DX Project
+## Use Case
 
-The `sfdx-project.json` file contains useful configuration information for your project. See [Salesforce DX Project Configuration](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_ws_config.htm) in the _Salesforce DX Developer Guide_ for details about this file.
+This integration allows you to seamlessly generate Stripe payment links from Salesforce, making it easy to charge customers directly from your CRM.
 
-## Read All About It
+---
 
-- [Salesforce Extensions Documentation](https://developer.salesforce.com/tools/vscode/)
-- [Salesforce CLI Setup Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_setup.meta/sfdx_setup/sfdx_setup_intro.htm)
-- [Salesforce DX Developer Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_intro.htm)
-- [Salesforce CLI Command Reference](https://developer.salesforce.com/docs/atlas.en-us.sfdx_cli_reference.meta/sfdx_cli_reference/cli_reference.htm)
+This project is an excellent starting point for connecting Salesforce data with Stripe payments.
