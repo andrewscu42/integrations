@@ -5,7 +5,7 @@ private class ContactTriggerHandlerTest {
     static void testAfterInsertWithNullList() {
         ContactTriggerHandler handler = new ContactTriggerHandler();
         
-        Test.setMock(HttpCalloutMock.class, new StripeFailureMock());
+        Test.setMock(HttpCalloutMock.class, StripeMock.failure());
         Test.startTest();
         try {
             handler.afterInsert(null);
@@ -20,7 +20,7 @@ private class ContactTriggerHandlerTest {
         ContactTriggerHandler handler = new ContactTriggerHandler();
         List<Contact> emptyList = new List<Contact>();
         
-        Test.setMock(HttpCalloutMock.class, new StripeFailureMock());
+        Test.setMock(HttpCalloutMock.class, StripeMock.failure());
         Test.startTest();
         try {
             handler.afterInsert(emptyList);
@@ -32,7 +32,7 @@ private class ContactTriggerHandlerTest {
     
     @isTest
     static void testAfterInsertWithValidContacts() {
-        Test.setMock(HttpCalloutMock.class, new StripeSuccessMock());
+        Test.setMock(HttpCalloutMock.class, StripeMock.success());
         List<Contact> contacts = new List<Contact>{
             new Contact(FirstName = 'Test', LastName = 'Contact1', Email = 'test1@example.com'),
             new Contact(FirstName = 'Test', LastName = 'Contact2', Email = 'test2@example.com')
@@ -41,7 +41,7 @@ private class ContactTriggerHandlerTest {
         
         contacts = [SELECT Id FROM Contact WHERE Email IN ('test1@example.com', 'test2@example.com')];
         ContactTriggerHandler handler = new ContactTriggerHandler();
-        Test.setMock(HttpCalloutMock.class, new StripeSuccessMock());
+        Test.setMock(HttpCalloutMock.class, StripeMock.success());
         Test.startTest();
         handler.afterInsert(contacts);
         Test.stopTest();
@@ -59,7 +59,7 @@ private class ContactTriggerHandlerTest {
         ContactTriggerHandler handler = new ContactTriggerHandler();
         Map<Id, Contact> oldMap = new Map<Id, Contact>();
         
-        Test.setMock(HttpCalloutMock.class, new StripeSuccessMock());
+        Test.setMock(HttpCalloutMock.class, StripeMock.success());
         Test.startTest();
         try {
             handler.afterUpdate(null, oldMap);
@@ -75,7 +75,7 @@ private class ContactTriggerHandlerTest {
         List<Contact> emptyList = new List<Contact>();
         Map<Id, Contact> oldMap = new Map<Id, Contact>();
         
-        Test.setMock(HttpCalloutMock.class, new StripeSuccessMock());
+        Test.setMock(HttpCalloutMock.class, StripeMock.success());
         Test.startTest();
         try {
             handler.afterUpdate(emptyList, oldMap);
@@ -87,7 +87,7 @@ private class ContactTriggerHandlerTest {
     
     @isTest
     static void testAfterUpdateWithEmailChange() {
-        Test.setMock(HttpCalloutMock.class, new StripeSuccessMock());
+        Test.setMock(HttpCalloutMock.class, StripeMock.success());
         Contact contact = new Contact(FirstName = 'Test', LastName = 'Contact', Email = 'oldemail@example.com');
         insert contact;
         
@@ -98,7 +98,7 @@ private class ContactTriggerHandlerTest {
         contact.Email = 'newemail@example.com';
         
         ContactTriggerHandler handler = new ContactTriggerHandler();
-        Test.setMock(HttpCalloutMock.class, new StripeSuccessMock());
+        Test.setMock(HttpCalloutMock.class, StripeMock.success());
         Test.startTest();
         handler.afterUpdate(new List<Contact>{contact}, oldMap);
         Test.stopTest();
@@ -113,7 +113,7 @@ private class ContactTriggerHandlerTest {
     
     @isTest
     static void testAfterUpdateWithoutEmailChange() {
-        Test.setMock(HttpCalloutMock.class, new StripeSuccessMock());
+        Test.setMock(HttpCalloutMock.class, StripeMock.success());
         Contact contact = new Contact(FirstName = 'Test', LastName = 'Contact', Email = 'test@example.com');
         insert contact;
         
@@ -122,7 +122,7 @@ private class ContactTriggerHandlerTest {
         };
         
         ContactTriggerHandler handler = new ContactTriggerHandler();
-        Test.setMock(HttpCalloutMock.class, new StripeSuccessMock());
+        Test.setMock(HttpCalloutMock.class, StripeMock.success());
         Test.startTest();
         handler.afterUpdate(new List<Contact>{contact}, oldMap);
         Test.stopTest();
@@ -137,7 +137,7 @@ private class ContactTriggerHandlerTest {
     
     @isTest
     static void testTriggerAfterInsert() {
-        Test.setMock(HttpCalloutMock.class, new StripeSuccessMock());
+        Test.setMock(HttpCalloutMock.class, StripeMock.success());
         Test.startTest();
         Contact newContact = new Contact(
             FirstName = 'Trigger',
@@ -157,7 +157,7 @@ private class ContactTriggerHandlerTest {
     
     @isTest
     static void testTriggerAfterUpdateWithEmailChange() {
-        Test.setMock(HttpCalloutMock.class, new StripeSuccessMock());
+        Test.setMock(HttpCalloutMock.class, StripeMock.success());
         Test.startTest();
         Contact contactToUpdate = new Contact(FirstName = 'Test', LastName = 'Contact', Email = 'original@example.com');
         insert contactToUpdate;
@@ -177,7 +177,7 @@ private class ContactTriggerHandlerTest {
     
     @isTest
     static void testTriggerAfterUpdateWithoutEmailChange() {
-        Test.setMock(HttpCalloutMock.class, new StripeSuccessMock());
+        Test.setMock(HttpCalloutMock.class, StripeMock.success());
         Test.startTest();
         Contact contactToUpdate = new Contact(FirstName = 'Test', LastName = 'Contact', Email = 'test@example.com');
         insert contactToUpdate;

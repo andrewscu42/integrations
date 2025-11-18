@@ -1,21 +1,18 @@
 public with sharing class PaymentLinkCallout {
 
     public String generateLink(Contact contact) {
+        String existingPaymentLink = findExistingPaymentLink(contact.Stripe_Customer_ID__c);
+        if (String.isNotBlank(existingPaymentLink)) {
+            return existingPaymentLink;
+        }
+
         if (String.isBlank(contact.Stripe_Customer_ID__c)) {
             if (String.isBlank(contact.Email)) {
                 throw new MissingRequiredFieldException('Contact must have an email address to create a Stripe payment link.');
             }
             StripeCreateCustomerQueueable queueable = new StripeCreateCustomerQueueable(new Set<Id>{contact.Id});
             String stripeCustomerId = queueable.createStripeCustomer(contact);
-            if (String.isBlank(stripeCustomerId)) {
-                throw new CalloutException('Failed to create Stripe customer for contact.');
-            }
             contact.Stripe_Customer_ID__c = stripeCustomerId;
-        }
-        
-        String existingPaymentLink = findExistingPaymentLink(contact.Stripe_Customer_ID__c);
-        if (String.isNotBlank(existingPaymentLink)) {
-            return existingPaymentLink;
         }
         
         return createPaymentLink(contact);
