@@ -1,0 +1,16 @@
+<html>
+<head>
+	<title></title>
+</head>
+<body style="height: auto; min-height: auto;">Dear {{{Recipient.Name}}},
+	<p>Thanks for subscribing to our Brazilian Jiu-Jitsu subscription and for choosing Igor's Gym.</p>
+	<p>We are excited to have you as a member and we look forward to seeing you at the gym.</p>
+	<p>Your payment link is: {{{Recipient.Stripe_Payment_Link__c}}}</p>
+	<p>Please click the link to pay your subscription.</p>
+	</p>Thank you for your subscription.</p>
+	<p>Best regards,</p>
+	<p>Igor's Gym</p>
+	Best regards,
+	Igor's Gym
+</body>
+</html>

@@ -55,10 +55,7 @@ public with sharing class PaymentLinkCallout {
         params.add('line_items[0][price_data][currency]=usd');
         params.add('line_items[0][price_data][product_data][name]=Payment for ' + EncodingUtil.urlEncode(contact.FirstName + ' ' + contact.LastName, 'UTF-8'));
         params.add('line_items[0][price_data][unit_amount]=1000');
-        
-        if (String.isNotBlank(contact.Stripe_Customer_ID__c)) {
-            params.add('customer=' + EncodingUtil.urlEncode(contact.Stripe_Customer_ID__c, 'UTF-8'));
-        }
+        params.add('line_items[0][quantity]=1');
         
         return String.join(params, '&');
     }

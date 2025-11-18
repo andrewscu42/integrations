@@ -16,7 +16,7 @@ public with sharing class PaymentLinkQueueable implements Queueable, Database.Al
         for (Contact contact : contactsToUpdate) {
             PaymentLinkCallout linkCallout = new PaymentLinkCallout();
             String paymentLink = linkCallout.generateLink(contact);
-            contact.Description = 'Payment Link: ' + paymentLink;
+            contact.Stripe_Payment_Link__c = paymentLink;
         }
 
         update contactsToUpdate;
