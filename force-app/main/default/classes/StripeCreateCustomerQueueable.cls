@@ -21,10 +21,8 @@ public class StripeCreateCustomerQueueable implements Queueable, Database.Allows
         for (Contact contact : contacts) {
             if (contact.Stripe_Customer_ID__c == null && contact.Email != null) {
                 String stripeCustomerId = createStripeCustomer(contact);
-                if (stripeCustomerId != null) {
-                    contact.Stripe_Customer_ID__c = stripeCustomerId;
-                    contactsToUpdate.add(contact);
-                }
+                contact.Stripe_Customer_ID__c = stripeCustomerId;
+                contactsToUpdate.add(contact);
             }
         }
         
@@ -33,21 +31,58 @@ public class StripeCreateCustomerQueueable implements Queueable, Database.Allows
     
     public String createStripeCustomer(Contact contact) {
         String body = buildRequestBody(contact);
-        HttpRequest req = new HttpRequest();
-        req.setEndpoint('callout:Stripe_API/v1/customers');
-        req.setMethod('POST');
-        req.setHeader('Content-Type', 'application/x-www-form-urlencoded');
-        req.setBody(body);
+        HttpRequest request = new HttpRequest();
+        request.setEndpoint('callout:Stripe_API/v1/customers');
+        request.setMethod('POST');
+        request.setHeader('Content-Type', 'application/x-www-form-urlencoded');
+        request.setBody(body);
         
         Http http = new Http();
-        HttpResponse res = http.send(req);
+        HttpResponse res = http.send(request);
         
-        if (isSuccessStatusCode(res.getStatusCode())) {
-            Map<String, Object> responseMap = (Map<String, Object>) JSON.deserializeUntyped(res.getBody());
-            return (String) responseMap.get('id');
+        Map<String, Object> responseMap = (Map<String, Object>) JSON.deserializeUntyped(res.getBody());
+        
+        return (String) responseMap.get('id');
+    }
+    
+    private String findStripeCustomerIdByEmail(String email) {
+        HttpRequest request = new HttpRequest();
+        String query = 'email:\'' + email + '\'';
+        request.setEndpoint('callout:Stripe_API/v1/customers/search?query=' + EncodingUtil.urlEncode(query, 'UTF-8'));
+        request.setMethod('GET');
+        Http http = new Http();
+        HttpResponse res = http.send(request);
+        Map<String, Object> responseMap = (Map<String, Object>) JSON.deserializeUntyped(res.getBody());
+        List<Object> data = (List<Object>) responseMap.get('data');
+        if (data == null || data.isEmpty()) {
+            return null;
         }
+        Map<String, Object> customer = (Map<String, Object>) data.get(0);
+        return (String) customer.get('id');
+    }
+    
+    private String updateStripeCustomer(String stripeCustomerId, Contact contact) {
+        String body = buildRequestBody(contact);
+        HttpRequest request = new HttpRequest();
+        request.setEndpoint('callout:Stripe_API/v1/customers/' + stripeCustomerId);
+        request.setMethod('POST');
+        request.setHeader('Content-Type', 'application/x-www-form-urlencoded');
+        request.setBody(body);
         
-        return null;
+        Http http = new Http();
+        HttpResponse res = http.send(request);
+        Map<String, Object> responseMap = (Map<String, Object>) JSON.deserializeUntyped(res.getBody());
+        return (String) responseMap.get('id');
+    }
+    
+    private String extractErrorMessage(Map<String, Object> responseMap, Integer statusCode) {
+        Map<String, Object> error = (Map<String, Object>) responseMap.get('error');
+        if (error != null) {
+            String message = (String) error.get('message');
+            String type = (String) error.get('type');
+            return String.format('Status {0}: {1} ({2})', new List<Object>{statusCode, message, type});
+        }
+        return 'Status ' + statusCode;
     }
     
     private String buildRequestBody(Contact contact) {
@@ -74,79 +109,7 @@ public class StripeCreateCustomerQueueable implements Queueable, Database.Allows
         return String.join(params, '&');
     }
     
-    private Boolean isSuccessStatusCode(Integer statusCode) {
-        return statusCode >= 200 && statusCode < 300;
-    }
-    
     public static void createCustomersFromContacts(Set<Id> contactIds) {
         System.enqueueJob(new StripeCreateCustomerQueueable(contactIds));
-    }
-    
-    public void processContacts(List<Contact> contacts) {
-        if (contacts == null || contacts.isEmpty()) {
-            throw new EmptyContactListException('The contact list cannot be null or empty.');
-        }
-        
-        for (Contact contact : contacts) {
-            if (String.isBlank(contact.Email)) {
-                throw new MissingRequiredFieldException(
-                    'Contact with Id ' + contact.Id + ' is missing required field: Email'
-                );
-            }
-        }
-        
-        List<Contact> contactsToUpdate = new List<Contact>();
-        
-        for (Contact contact : contacts) {
-            String stripeCustomerId = findStripeCustomerIdByEmail(contact.Email);
-            
-            if (stripeCustomerId == null) {
-                stripeCustomerId = createStripeCustomer(contact);
-        
-            } else {
-                updateStripeCustomer(stripeCustomerId, contact);
-            }
-            contact.Stripe_Customer_ID__c = stripeCustomerId;
-            contactsToUpdate.add(contact);
-        }
-        update contactsToUpdate;
-    }
-
-    private String findStripeCustomerIdByEmail(String email) {
-        HttpRequest req = new HttpRequest();
-        String query = 'email:\'' + email + '\'';
-        req.setEndpoint('callout:Stripe_API/v1/customers/search?query=' + EncodingUtil.urlEncode(query, 'UTF-8'));
-        req.setMethod('GET');
-        Http http = new Http();
-        HttpResponse res = http.send(req);
-        if (!isSuccessStatusCode(res.getStatusCode())) {
-            return 'No response from Stripe API';
-        }
-        Map<String, Object> responseMap = (Map<String, Object>) JSON.deserializeUntyped(res.getBody());
-        List<Object> data = (List<Object>) responseMap.get('data');
-        if (data == null || data.isEmpty()) {
-            return null;
-        }
-        Map<String, Object> customer = (Map<String, Object>) data[0];
-        return (String) customer.get('id');
-    }
-    
-    private String updateStripeCustomer(String stripeCustomerId, Contact contact) {
-        String body = buildRequestBody(contact);
-        HttpRequest req = new HttpRequest();
-        req.setEndpoint('callout:Stripe_API/v1/customers/' + stripeCustomerId);
-        req.setMethod('POST');
-        req.setHeader('Content-Type', 'application/x-www-form-urlencoded');
-        req.setBody(body);
-        
-        Http http = new Http();
-        HttpResponse res = http.send(req);
-        
-        if (isSuccessStatusCode(res.getStatusCode())) {
-            Map<String, Object> responseMap = (Map<String, Object>) JSON.deserializeUntyped(res.getBody());
-            return (String) responseMap.get('id');
-        }
-        
-        return null;
     }
 }

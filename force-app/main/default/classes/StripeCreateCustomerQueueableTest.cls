@@ -23,7 +23,7 @@ private class StripeCreateCustomerQueueableTest {
     }
     
     @isTest
-    static void testCreateStripeCustomerAPIResponseFailure() {
+    static void testNoAPIResponse() {
         Contact testContact = new Contact(
             FirstName = 'Jane',
             LastName = 'Smith',
