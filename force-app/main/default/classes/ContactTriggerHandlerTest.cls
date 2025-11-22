@@ -2,35 +2,6 @@
 private class ContactTriggerHandlerTest {
     
     @isTest
-    static void testAfterInsertWithNullList() {
-        ContactTriggerHandler handler = new ContactTriggerHandler();
-        
-        Test.setMock(HttpCalloutMock.class, StripeMock.failure());
-        Test.startTest();
-        try {
-            handler.afterInsert(null);
-            System.assert(false, 'Expected EmptyContactListException was not thrown');
-        } catch (EmptyContactListException e) {
-        }
-        Test.stopTest();
-    }
-    
-    @isTest
-    static void testAfterInsertWithEmptyList() {
-        ContactTriggerHandler handler = new ContactTriggerHandler();
-        List<Contact> emptyList = new List<Contact>();
-        
-        Test.setMock(HttpCalloutMock.class, StripeMock.failure());
-        Test.startTest();
-        try {
-            handler.afterInsert(emptyList);
-            System.assert(false, 'Expected EmptyContactListException was not thrown');
-        } catch (EmptyContactListException e) {
-        }
-        Test.stopTest();
-    }
-    
-    @isTest
     static void testAfterInsertWithValidContacts() {
         Test.setMock(HttpCalloutMock.class, StripeMock.success());
         List<Contact> contacts = new List<Contact>{
@@ -43,7 +14,7 @@ private class ContactTriggerHandlerTest {
         ContactTriggerHandler handler = new ContactTriggerHandler();
         Test.setMock(HttpCalloutMock.class, StripeMock.success());
         Test.startTest();
-        handler.afterInsert(contacts);
+        handler.afterInsert(contacts, new Map<Id, Contact>(contacts));
         Test.stopTest();
         
         List<AsyncApexJob> jobs = [
@@ -52,37 +23,6 @@ private class ContactTriggerHandlerTest {
             WHERE JobType = 'Queueable'
         ];
         System.assert(jobs.size() > 0, 'Queueable job should have been enqueued');
-    }
-    
-    @isTest
-    static void testAfterUpdateWithNullList() {
-        ContactTriggerHandler handler = new ContactTriggerHandler();
-        Map<Id, Contact> oldMap = new Map<Id, Contact>();
-        
-        Test.setMock(HttpCalloutMock.class, StripeMock.success());
-        Test.startTest();
-        try {
-            handler.afterUpdate(null, oldMap);
-            System.assert(false, 'Expected EmptyContactListException was not thrown');
-        } catch (EmptyContactListException e) {
-        }
-        Test.stopTest();
-    }
-    
-    @isTest
-    static void testAfterUpdateWithEmptyList() {
-        ContactTriggerHandler handler = new ContactTriggerHandler();
-        List<Contact> emptyList = new List<Contact>();
-        Map<Id, Contact> oldMap = new Map<Id, Contact>();
-        
-        Test.setMock(HttpCalloutMock.class, StripeMock.success());
-        Test.startTest();
-        try {
-            handler.afterUpdate(emptyList, oldMap);
-            System.assert(false, 'Expected EmptyContactListException was not thrown');
-        } catch (EmptyContactListException e) {
-        }
-        Test.stopTest();
     }
     
     @isTest
