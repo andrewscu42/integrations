@@ -1,0 +1,5357 @@
+ ›   Warning: @salesforce/cli update available from 2.111.7 to 2.113.6.
+{
+  "result": {
+    "summary": {
+      "failRate": "0%",
+      "failing": 0,
+      "hostname": "https://sculliwag-corp-dev-ed.develop.my.salesforce.com",
+      "orgId": "00DWT000000LrhF2AS",
+      "outcome": "Passed",
+      "passRate": "100%",
+      "passing": 24,
+      "skipped": 0,
+      "testRunId": "707WT00000k1L3G",
+      "testStartTime": "2025-11-29T21:31:43.000Z",
+      "testsRan": 24,
+      "userId": "005WT000000B6LRYA0",
+      "username": "sculliwag@gmail.com",
+      "commandTime": "62 ms",
+      "testExecutionTime": "3709 ms",
+      "testTotalTime": "3709 ms",
+      "orgWideCoverage": "40%",
+      "testRunCoverage": "95%"
+    },
+    "tests": [
+      {
+        "Id": "07MWT000003PFoX2AW",
+        "QueueItemId": "709WT000002l20WYAQ",
+        "StackTrace": null,
+        "Message": null,
+        "AsyncApexJobId": "707WT00000k1L3GYAU",
+        "MethodName": "customerWithSameEmailExists",
+        "Outcome": "Pass",
+        "ApexClass": {
+          "Id": "01pWT000002hvGPYAY",
+          "Name": "StripeCreateCustomerQueueableTest",
+          "NamespacePrefix": null
+        },
+        "RunTime": 216,
+        "FullName": "StripeCreateCustomerQueueableTest.customerWithSameEmailExists"
+      },
+      {
+        "Id": "07MWT000003PFoY2AW",
+        "QueueItemId": "709WT000002l20WYAQ",
+        "StackTrace": null,
+        "Message": null,
+        "AsyncApexJobId": "707WT00000k1L3GYAU",
+        "MethodName": "testCreateStripeCustomerSuccess",
+        "Outcome": "Pass",
+        "ApexClass": {
+          "Id": "01pWT000002hvGPYAY",
+          "Name": "StripeCreateCustomerQueueableTest",
+          "NamespacePrefix": null
+        },
+        "RunTime": 118,
+        "FullName": "StripeCreateCustomerQueueableTest.testCreateStripeCustomerSuccess"
+      },
+      {
+        "Id": "07MWT000003PFoZ2AW",
+        "QueueItemId": "709WT000002l20WYAQ",
+        "StackTrace": null,
+        "Message": null,
+        "AsyncApexJobId": "707WT00000k1L3GYAU",
+        "MethodName": "testCreateStripeCustomerWithInvalidEmail",
+        "Outcome": "Pass",
+        "ApexClass": {
+          "Id": "01pWT000002hvGPYAY",
+          "Name": "StripeCreateCustomerQueueableTest",
+          "NamespacePrefix": null
+        },
+        "RunTime": 97,
+        "FullName": "StripeCreateCustomerQueueableTest.testCreateStripeCustomerWithInvalidEmail"
+      },
+      {
+        "Id": "07MWT000003PFoa2AG",
+        "QueueItemId": "709WT000002l20WYAQ",
+        "StackTrace": null,
+        "Message": null,
+        "AsyncApexJobId": "707WT00000k1L3GYAU",
+        "MethodName": "testExtractErrorMessage",
+        "Outcome": "Pass",
+        "ApexClass": {
+          "Id": "01pWT000002hvGPYAY",
+          "Name": "StripeCreateCustomerQueueableTest",
+          "NamespacePrefix": null
+        },
+        "RunTime": 39,
+        "FullName": "StripeCreateCustomerQueueableTest.testExtractErrorMessage"
+      },
+      {
+        "Id": "07MWT000003PFob2AG",
+        "QueueItemId": "709WT000002l20WYAQ",
+        "StackTrace": null,
+        "Message": null,
+        "AsyncApexJobId": "707WT00000k1L3GYAU",
+        "MethodName": "testFindStripeCustomerIdByEmailNotFound",
+        "Outcome": "Pass",
+        "ApexClass": {
+          "Id": "01pWT000002hvGPYAY",
+          "Name": "StripeCreateCustomerQueueableTest",
+          "NamespacePrefix": null
+        },
+        "RunTime": 117,
+        "FullName": "StripeCreateCustomerQueueableTest.testFindStripeCustomerIdByEmailNotFound"
+      },
+      {
+        "Id": "07MWT000003PFoc2AG",
+        "QueueItemId": "709WT000002l20WYAQ",
+        "StackTrace": null,
+        "Message": null,
+        "AsyncApexJobId": "707WT00000k1L3GYAU",
+        "MethodName": "testNoAPIResponse",
+        "Outcome": "Pass",
+        "ApexClass": {
+          "Id": "01pWT000002hvGPYAY",
+          "Name": "StripeCreateCustomerQueueableTest",
+          "NamespacePrefix": null
+        },
+        "RunTime": 87,
+        "FullName": "StripeCreateCustomerQueueableTest.testNoAPIResponse"
+      },
+      {
+        "Id": "07MWT000003PFod2AG",
+        "QueueItemId": "709WT000002l20WYAQ",
+        "StackTrace": null,
+        "Message": null,
+        "AsyncApexJobId": "707WT00000k1L3GYAU",
+        "MethodName": "testSkipContactWithExistingStripeId",
+        "Outcome": "Pass",
+        "ApexClass": {
+          "Id": "01pWT000002hvGPYAY",
+          "Name": "StripeCreateCustomerQueueableTest",
+          "NamespacePrefix": null
+        },
+        "RunTime": 78,
+        "FullName": "StripeCreateCustomerQueueableTest.testSkipContactWithExistingStripeId"
+      },
+      {
+        "Id": "07MWT000003PFoe2AG",
+        "QueueItemId": "709WT000002l20WYAQ",
+        "StackTrace": null,
+        "Message": null,
+        "AsyncApexJobId": "707WT00000k1L3GYAU",
+        "MethodName": "testUpdateStripeCustomerSuccess",
+        "Outcome": "Pass",
+        "ApexClass": {
+          "Id": "01pWT000002hvGPYAY",
+          "Name": "StripeCreateCustomerQueueableTest",
+          "NamespacePrefix": null
+        },
+        "RunTime": 61,
+        "FullName": "StripeCreateCustomerQueueableTest.testUpdateStripeCustomerSuccess"
+      },
+      {
+        "Id": "07MWT000003PFq92AG",
+        "QueueItemId": "709WT000002l20YYAQ",
+        "StackTrace": null,
+        "Message": null,
+        "AsyncApexJobId": "707WT00000k1L3GYAU",
+        "MethodName": "testAfterInsertWithValidContacts",
+        "Outcome": "Pass",
+        "ApexClass": {
+          "Id": "01pWT000002hpnhYAA",
+          "Name": "ContactTriggerHandlerTest",
+          "NamespacePrefix": null
+        },
+        "RunTime": 262,
+        "FullName": "ContactTriggerHandlerTest.testAfterInsertWithValidContacts"
+      },
+      {
+        "Id": "07MWT000003PFqA2AW",
+        "QueueItemId": "709WT000002l20YYAQ",
+        "StackTrace": null,
+        "Message": null,
+        "AsyncApexJobId": "707WT00000k1L3GYAU",
+        "MethodName": "testAfterUpdateWithEmailChange",
+        "Outcome": "Pass",
+        "ApexClass": {
+          "Id": "01pWT000002hpnhYAA",
+          "Name": "ContactTriggerHandlerTest",
+          "NamespacePrefix": null
+        },
+        "RunTime": 179,
+        "FullName": "ContactTriggerHandlerTest.testAfterUpdateWithEmailChange"
+      },
+      {
+        "Id": "07MWT000003PFqB2AW",
+        "QueueItemId": "709WT000002l20YYAQ",
+        "StackTrace": null,
+        "Message": null,
+        "AsyncApexJobId": "707WT00000k1L3GYAU",
+        "MethodName": "testAfterUpdateWithoutEmailChange",
+        "Outcome": "Pass",
+        "ApexClass": {
+          "Id": "01pWT000002hpnhYAA",
+          "Name": "ContactTriggerHandlerTest",
+          "NamespacePrefix": null
+        },
+        "RunTime": 175,
+        "FullName": "ContactTriggerHandlerTest.testAfterUpdateWithoutEmailChange"
+      },
+      {
+        "Id": "07MWT000003PFqC2AW",
+        "QueueItemId": "709WT000002l20YYAQ",
+        "StackTrace": null,
+        "Message": null,
+        "AsyncApexJobId": "707WT00000k1L3GYAU",
+        "MethodName": "testTriggerAfterInsert",
+        "Outcome": "Pass",
+        "ApexClass": {
+          "Id": "01pWT000002hpnhYAA",
+          "Name": "ContactTriggerHandlerTest",
+          "NamespacePrefix": null
+        },
+        "RunTime": 149,
+        "FullName": "ContactTriggerHandlerTest.testTriggerAfterInsert"
+      },
+      {
+        "Id": "07MWT000003PFqD2AW",
+        "QueueItemId": "709WT000002l20YYAQ",
+        "StackTrace": null,
+        "Message": null,
+        "AsyncApexJobId": "707WT00000k1L3GYAU",
+        "MethodName": "testTriggerAfterUpdateWithEmailChange",
+        "Outcome": "Pass",
+        "ApexClass": {
+          "Id": "01pWT000002hpnhYAA",
+          "Name": "ContactTriggerHandlerTest",
+          "NamespacePrefix": null
+        },
+        "RunTime": 199,
+        "FullName": "ContactTriggerHandlerTest.testTriggerAfterUpdateWithEmailChange"
+      },
+      {
+        "Id": "07MWT000003PFqE2AW",
+        "QueueItemId": "709WT000002l20YYAQ",
+        "StackTrace": null,
+        "Message": null,
+        "AsyncApexJobId": "707WT00000k1L3GYAU",
+        "MethodName": "testTriggerAfterUpdateWithoutEmailChange",
+        "Outcome": "Pass",
+        "ApexClass": {
+          "Id": "01pWT000002hpnhYAA",
+          "Name": "ContactTriggerHandlerTest",
+          "NamespacePrefix": null
+        },
+        "RunTime": 204,
+        "FullName": "ContactTriggerHandlerTest.testTriggerAfterUpdateWithoutEmailChange"
+      },
+      {
+        "Id": "07MWT000003PFlJ2AW",
+        "QueueItemId": "709WT000002l20ZYAQ",
+        "StackTrace": null,
+        "Message": null,
+        "AsyncApexJobId": "707WT00000k1L3GYAU",
+        "MethodName": "testLogErrorCreatesLogEntry",
+        "Outcome": "Pass",
+        "ApexClass": {
+          "Id": "01pWT000002lEkjYAE",
+          "Name": "ErrorLoggerTest",
+          "NamespacePrefix": null
+        },
+        "RunTime": 63,
+        "FullName": "ErrorLoggerTest.testLogErrorCreatesLogEntry"
+      },
+      {
+        "Id": "07MWT000003PFlK2AW",
+        "QueueItemId": "709WT000002l20ZYAQ",
+        "StackTrace": null,
+        "Message": null,
+        "AsyncApexJobId": "707WT00000k1L3GYAU",
+        "MethodName": "testLogErrorWithException",
+        "Outcome": "Pass",
+        "ApexClass": {
+          "Id": "01pWT000002lEkjYAE",
+          "Name": "ErrorLoggerTest",
+          "NamespacePrefix": null
+        },
+        "RunTime": 30,
+        "FullName": "ErrorLoggerTest.testLogErrorWithException"
+      },
+      {
+        "Id": "07MWT000003PFrl2AG",
+        "QueueItemId": "709WT000002l20aYAA",
+        "StackTrace": null,
+        "Message": null,
+        "AsyncApexJobId": "707WT00000k1L3GYAU",
+        "MethodName": "testErrorLogCleanupBatch",
+        "Outcome": "Pass",
+        "ApexClass": {
+          "Id": "01pWT000002lEnxYAE",
+          "Name": "ErrorLogCleanupBatchTest",
+          "NamespacePrefix": null
+        },
+        "RunTime": 564,
+        "FullName": "ErrorLogCleanupBatchTest.testErrorLogCleanupBatch"
+      },
+      {
+        "Id": "07MWT000003PFmv2AG",
+        "QueueItemId": "709WT000002l20bYAA",
+        "StackTrace": null,
+        "Message": null,
+        "AsyncApexJobId": "707WT00000k1L3GYAU",
+        "MethodName": "testGeneratePaymentLinkFailure",
+        "Outcome": "Pass",
+        "ApexClass": {
+          "Id": "01pWT000002lEw1YAE",
+          "Name": "PaymentLinkQueueableTest",
+          "NamespacePrefix": null
+        },
+        "RunTime": 236,
+        "FullName": "PaymentLinkQueueableTest.testGeneratePaymentLinkFailure"
+      },
+      {
+        "Id": "07MWT000003PFmw2AG",
+        "QueueItemId": "709WT000002l20bYAA",
+        "StackTrace": null,
+        "Message": null,
+        "AsyncApexJobId": "707WT00000k1L3GYAU",
+        "MethodName": "testGeneratePaymentLinkMultipleContacts",
+        "Outcome": "Pass",
+        "ApexClass": {
+          "Id": "01pWT000002lEw1YAE",
+          "Name": "PaymentLinkQueueableTest",
+          "NamespacePrefix": null
+        },
+        "RunTime": 145,
+        "FullName": "PaymentLinkQueueableTest.testGeneratePaymentLinkMultipleContacts"
+      },
+      {
+        "Id": "07MWT000003PFmx2AG",
+        "QueueItemId": "709WT000002l20bYAA",
+        "StackTrace": null,
+        "Message": null,
+        "AsyncApexJobId": "707WT00000k1L3GYAU",
+        "MethodName": "testGeneratePaymentLinkOuterCatchBlock",
+        "Outcome": "Pass",
+        "ApexClass": {
+          "Id": "01pWT000002lEw1YAE",
+          "Name": "PaymentLinkQueueableTest",
+          "NamespacePrefix": null
+        },
+        "RunTime": 109,
+        "FullName": "PaymentLinkQueueableTest.testGeneratePaymentLinkOuterCatchBlock"
+      },
+      {
+        "Id": "07MWT000003PFmy2AG",
+        "QueueItemId": "709WT000002l20bYAA",
+        "StackTrace": null,
+        "Message": null,
+        "AsyncApexJobId": "707WT00000k1L3GYAU",
+        "MethodName": "testGeneratePaymentLinkSuccess",
+        "Outcome": "Pass",
+        "ApexClass": {
+          "Id": "01pWT000002lEw1YAE",
+          "Name": "PaymentLinkQueueableTest",
+          "NamespacePrefix": null
+        },
+        "RunTime": 122,
+        "FullName": "PaymentLinkQueueableTest.testGeneratePaymentLinkSuccess"
+      },
+      {
+        "Id": "07MWT000003PFmz2AG",
+        "QueueItemId": "709WT000002l20bYAA",
+        "StackTrace": null,
+        "Message": null,
+        "AsyncApexJobId": "707WT00000k1L3GYAU",
+        "MethodName": "testGeneratePaymentLinkWithCustomerCreation",
+        "Outcome": "Pass",
+        "ApexClass": {
+          "Id": "01pWT000002lEw1YAE",
+          "Name": "PaymentLinkQueueableTest",
+          "NamespacePrefix": null
+        },
+        "RunTime": 171,
+        "FullName": "PaymentLinkQueueableTest.testGeneratePaymentLinkWithCustomerCreation"
+      },
+      {
+        "Id": "07MWT000003PFYQ2A4",
+        "QueueItemId": "709WT000002l20cYAA",
+        "StackTrace": null,
+        "Message": null,
+        "AsyncApexJobId": "707WT00000k1L3GYAU",
+        "MethodName": "testGenerateLinkFailure",
+        "Outcome": "Pass",
+        "ApexClass": {
+          "Id": "01pWT000002lExdYAE",
+          "Name": "PaymentLinkCalloutTest",
+          "NamespacePrefix": null
+        },
+        "RunTime": 200,
+        "FullName": "PaymentLinkCalloutTest.testGenerateLinkFailure"
+      },
+      {
+        "Id": "07MWT000003PFYR2A4",
+        "QueueItemId": "709WT000002l20cYAA",
+        "StackTrace": null,
+        "Message": null,
+        "AsyncApexJobId": "707WT00000k1L3GYAU",
+        "MethodName": "testGenerateLinkSuccess",
+        "Outcome": "Pass",
+        "ApexClass": {
+          "Id": "01pWT000002lExdYAE",
+          "Name": "PaymentLinkCalloutTest",
+          "NamespacePrefix": null
+        },
+        "RunTime": 88,
+        "FullName": "PaymentLinkCalloutTest.testGenerateLinkSuccess"
+      }
+    ],
+    "coverage": {
+      "coverage": [
+        {
+          "id": "01pWT000002hoTRYAY",
+          "name": "ContactTriggerHandler",
+          "totalLines": 12,
+          "lines": {
+            "2": 1,
+            "3": 1,
+            "4": 1,
+            "6": 1,
+            "7": 1,
+            "8": 1,
+            "9": 1,
+            "10": 1,
+            "11": 1,
+            "14": 1,
+            "17": 0,
+            "18": 0
+          },
+          "totalCovered": 10,
+          "coveredPercent": 83
+        },
+        {
+          "id": "01qWT000004DbsHYAS",
+          "name": "Contact",
+          "totalLines": 4,
+          "lines": {
+            "2": 1,
+            "3": 1,
+            "4": 1,
+            "5": 1
+          },
+          "totalCovered": 4,
+          "coveredPercent": 100
+        },
+        {
+          "id": "01pWT000002hrHdYAI",
+          "name": "ContactQueries",
+          "totalLines": 3,
+          "lines": {
+            "2": 1,
+            "3": 1,
+            "8": 1
+          },
+          "totalCovered": 3,
+          "coveredPercent": 100
+        },
+        {
+          "id": "01pWT000002hrJFYAY",
+          "name": "PaymentLinkCallout",
+          "totalLines": 37,
+          "lines": {
+            "3": 1,
+            "4": 1,
+            "5": 1,
+            "6": 0,
+            "9": 1,
+            "10": 0,
+            "11": 0,
+            "13": 0,
+            "14": 0,
+            "15": 0,
+            "18": 1,
+            "21": 1,
+            "22": 1,
+            "25": 1,
+            "26": 1,
+            "27": 1,
+            "28": 1,
+            "29": 1,
+            "30": 1,
+            "32": 1,
+            "33": 1,
+            "35": 1,
+            "36": 1,
+            "39": 1,
+            "40": 1,
+            "42": 1,
+            "43": 0,
+            "46": 1,
+            "49": 1,
+            "50": 1,
+            "52": 1,
+            "53": 1,
+            "54": 1,
+            "55": 1,
+            "57": 1,
+            "60": 1,
+            "61": 1
+          },
+          "totalCovered": 30,
+          "coveredPercent": 81
+        },
+        {
+          "id": "01pWT000002hrKrYAI",
+          "name": "PaymentLinkQueueable",
+          "totalLines": 32,
+          "lines": {
+            "4": 1,
+            "5": 1,
+            "8": 1,
+            "9": 1,
+            "12": 1,
+            "13": 1,
+            "14": 1,
+            "15": 1,
+            "17": 1,
+            "18": 1,
+            "19": 1,
+            "20": 1,
+            "21": 1,
+            "22": 1,
+            "24": 1,
+            "25": 1,
+            "26": 1,
+            "27": 1,
+            "28": 1,
+            "29": 1,
+            "30": 1,
+            "35": 1,
+            "36": 1,
+            "37": 1,
+            "38": 1,
+            "39": 1,
+            "41": 1,
+            "42": 1,
+            "43": 1,
+            "44": 1,
+            "45": 1,
+            "46": 1
+          },
+          "totalCovered": 32,
+          "coveredPercent": 100
+        },
+        {
+          "id": "01pWT000002hrfpYAA",
+          "name": "StripeCreateCustomerQueueable",
+          "totalLines": 78,
+          "lines": {
+            "5": 1,
+            "6": 1,
+            "9": 1,
+            "10": 1,
+            "11": 1,
+            "12": 1,
+            "14": 1,
+            "15": 1,
+            "16": 1,
+            "17": 1,
+            "18": 1,
+            "19": 1,
+            "21": 1,
+            "22": 1,
+            "23": 1,
+            "24": 1,
+            "30": 1,
+            "33": 1,
+            "34": 1,
+            "35": 1,
+            "36": 1,
+            "37": 1,
+            "38": 1,
+            "39": 1,
+            "41": 1,
+            "42": 1,
+            "44": 1,
+            "46": 1,
+            "49": 1,
+            "50": 1,
+            "51": 1,
+            "52": 1,
+            "53": 1,
+            "54": 1,
+            "55": 1,
+            "56": 1,
+            "57": 1,
+            "58": 1,
+            "59": 1,
+            "61": 1,
+            "62": 1,
+            "65": 1,
+            "66": 1,
+            "67": 1,
+            "68": 1,
+            "69": 1,
+            "70": 1,
+            "71": 1,
+            "73": 1,
+            "74": 1,
+            "75": 1,
+            "76": 1,
+            "79": 1,
+            "80": 1,
+            "81": 1,
+            "82": 1,
+            "83": 1,
+            "84": 1,
+            "85": 1,
+            "86": 1,
+            "87": 1,
+            "89": 1,
+            "92": 1,
+            "93": 1,
+            "94": 1,
+            "96": 1,
+            "97": 1,
+            "98": 1,
+            "99": 1,
+            "101": 1,
+            "102": 1,
+            "105": 1,
+            "106": 1,
+            "109": 1,
+            "110": 1,
+            "113": 1,
+            "116": 1,
+            "117": 1
+          },
+          "totalCovered": 78,
+          "coveredPercent": 100
+        },
+        {
+          "id": "01pWT000002lEj7YAE",
+          "name": "ErrorLogger",
+          "totalLines": 15,
+          "lines": {
+            "2": 1,
+            "9": 1,
+            "10": 1,
+            "11": 1,
+            "12": 1,
+            "13": 1,
+            "14": 1,
+            "15": 1,
+            "18": 1,
+            "19": 1,
+            "20": 1,
+            "21": 1,
+            "22": 1,
+            "23": 1,
+            "24": 1
+          },
+          "totalCovered": 15,
+          "coveredPercent": 100
+        },
+        {
+          "id": "01pWT000002lEmLYAU",
+          "name": "ErrorLogCleanupBatch",
+          "totalLines": 5,
+          "lines": {
+            "2": 1,
+            "3": 1,
+            "11": 1,
+            "12": 1,
+            "15": 1
+          },
+          "totalCovered": 5,
+          "coveredPercent": 100
+        }
+      ],
+      "records": [
+        {
+          "ApexTestClass": {
+            "Id": "07MWT000003PFoX2AW",
+            "Name": "StripeCreateCustomerQueueableTest"
+          },
+          "Coverage": {
+            "coveredLines": [
+              2,
+              3,
+              4,
+              6,
+              7,
+              8,
+              9,
+              10,
+              14
+            ],
+            "uncoveredLines": [
+              11,
+              17,
+              18
+            ]
+          },
+          "TestMethodName": "customerWithSameEmailExists",
+          "NumLinesCovered": 9,
+          "ApexClassOrTrigger": {
+            "Id": "01pWT000002hoTRYAY",
+            "Name": "ContactTriggerHandler"
+          },
+          "NumLinesUncovered": 3
+        },
+        {
+          "ApexTestClass": {
+            "Id": "07MWT000003PFoX2AW",
+            "Name": "StripeCreateCustomerQueueableTest"
+          },
+          "Coverage": {
+            "coveredLines": [
+              2,
+              3,
+              8
+            ],
+            "uncoveredLines": []
+          },
+          "TestMethodName": "customerWithSameEmailExists",
+          "NumLinesCovered": 3,
+          "ApexClassOrTrigger": {
+            "Id": "01pWT000002hrHdYAI",
+            "Name": "ContactQueries"
+          },
+          "NumLinesUncovered": 0
+        },
+        {
+          "ApexTestClass": {
+            "Id": "07MWT000003PFoX2AW",
+            "Name": "StripeCreateCustomerQueueableTest"
+          },
+          "Coverage": {
+            "coveredLines": [
+              5,
+              6,
+              9,
+              10,
+              11,
+              12,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19,
+              30,
+              49,
+              50,
+              51,
+              52,
+              53,
+              54,
+              55,
+              56,
+              57,
+              58,
+              61,
+              62,
+              116,
+              117
+            ],
+            "uncoveredLines": [
+              21,
+              22,
+              23,
+              24,
+              33,
+              34,
+              35,
+              36,
+              37,
+              38,
+              39,
+              41,
+              42,
+              44,
+              46,
+              59,
+              65,
+              66,
+              67,
+              68,
+              69,
+              70,
+              71,
+              73,
+              74,
+              75,
+              76,
+              79,
+              80,
+              81,
+              82,
+              83,
+              84,
+              85,
+              86,
+              87,
+              89,
+              92,
+              93,
+              94,
+              96,
+              97,
+              98,
+              99,
+              101,
+              102,
+              105,
+              106,
+              109,
+              110,
+              113
+            ]
+          },
+          "TestMethodName": "customerWithSameEmailExists",
+          "NumLinesCovered": 27,
+          "ApexClassOrTrigger": {
+            "Id": "01pWT000002hrfpYAA",
+            "Name": "StripeCreateCustomerQueueable"
+          },
+          "NumLinesUncovered": 51
+        },
+        {
+          "ApexTestClass": {
+            "Id": "07MWT000003PFoX2AW",
+            "Name": "StripeCreateCustomerQueueableTest"
+          },
+          "Coverage": {
+            "coveredLines": [
+              2,
+              3,
+              4,
+              5
+            ],
+            "uncoveredLines": []
+          },
+          "TestMethodName": "customerWithSameEmailExists",
+          "NumLinesCovered": 4,
+          "ApexClassOrTrigger": {
+            "Id": "01qWT000004DbsHYAS",
+            "Name": "Contact"
+          },
+          "NumLinesUncovered": 0
+        },
+        {
+          "ApexTestClass": {
+            "Id": "07MWT000003PFoY2AW",
+            "Name": "StripeCreateCustomerQueueableTest"
+          },
+          "Coverage": {
+            "coveredLines": [
+              5,
+              6,
+              9,
+              10,
+              11,
+              12,
+              14,
+              15,
+              16,
+              17,
+              21,
+              22,
+              23,
+              24,
+              30,
+              33,
+              34,
+              35,
+              36,
+              37,
+              38,
+              39,
+              41,
+              42,
+              44,
+              46,
+              49,
+              50,
+              51,
+              52,
+              53,
+              54,
+              55,
+              56,
+              57,
+              58,
+              59,
+              92,
+              93,
+              94,
+              96,
+              97,
+              98,
+              99,
+              101,
+              102,
+              105,
+              106,
+              109,
+              110,
+              113,
+              116,
+              117
+            ],
+            "uncoveredLines": [
+              18,
+              19,
+              61,
+              62,
+              65,
+              66,
+              67,
+              68,
+              69,
+              70,
+              71,
+              73,
+              74,
+              75,
+              76,
+              79,
+              80,
+              81,
+              82,
+              83,
+              84,
+              85,
+              86,
+              87,
+              89
+            ]
+          },
+          "TestMethodName": "testCreateStripeCustomerSuccess",
+          "NumLinesCovered": 53,
+          "ApexClassOrTrigger": {
+            "Id": "01pWT000002hrfpYAA",
+            "Name": "StripeCreateCustomerQueueable"
+          },
+          "NumLinesUncovered": 25
+        },
+        {
+          "ApexTestClass": {
+            "Id": "07MWT000003PFoY2AW",
+            "Name": "StripeCreateCustomerQueueableTest"
+          },
+          "Coverage": {
+            "coveredLines": [
+              2,
+              3,
+              4,
+              6,
+              7,
+              8,
+              9,
+              10,
+              14
+            ],
+            "uncoveredLines": [
+              11,
+              17,
+              18
+            ]
+          },
+          "TestMethodName": "testCreateStripeCustomerSuccess",
+          "NumLinesCovered": 9,
+          "ApexClassOrTrigger": {
+            "Id": "01pWT000002hoTRYAY",
+            "Name": "ContactTriggerHandler"
+          },
+          "NumLinesUncovered": 3
+        },
+        {
+          "ApexTestClass": {
+            "Id": "07MWT000003PFoY2AW",
+            "Name": "StripeCreateCustomerQueueableTest"
+          },
+          "Coverage": {
+            "coveredLines": [
+              2,
+              3,
+              4,
+              5
+            ],
+            "uncoveredLines": []
+          },
+          "TestMethodName": "testCreateStripeCustomerSuccess",
+          "NumLinesCovered": 4,
+          "ApexClassOrTrigger": {
+            "Id": "01qWT000004DbsHYAS",
+            "Name": "Contact"
+          },
+          "NumLinesUncovered": 0
+        },
+        {
+          "ApexTestClass": {
+            "Id": "07MWT000003PFoY2AW",
+            "Name": "StripeCreateCustomerQueueableTest"
+          },
+          "Coverage": {
+            "coveredLines": [
+              2,
+              3,
+              8
+            ],
+            "uncoveredLines": []
+          },
+          "TestMethodName": "testCreateStripeCustomerSuccess",
+          "NumLinesCovered": 3,
+          "ApexClassOrTrigger": {
+            "Id": "01pWT000002hrHdYAI",
+            "Name": "ContactQueries"
+          },
+          "NumLinesUncovered": 0
+        },
+        {
+          "ApexTestClass": {
+            "Id": "07MWT000003PFoZ2AW",
+            "Name": "StripeCreateCustomerQueueableTest"
+          },
+          "Coverage": {
+            "coveredLines": [
+              2,
+              3,
+              4,
+              6
+            ],
+            "uncoveredLines": [
+              7,
+              8,
+              9,
+              10,
+              11,
+              14,
+              17,
+              18
+            ]
+          },
+          "TestMethodName": "testCreateStripeCustomerWithInvalidEmail",
+          "NumLinesCovered": 4,
+          "ApexClassOrTrigger": {
+            "Id": "01pWT000002hoTRYAY",
+            "Name": "ContactTriggerHandler"
+          },
+          "NumLinesUncovered": 8
+        },
+        {
+          "ApexTestClass": {
+            "Id": "07MWT000003PFoZ2AW",
+            "Name": "StripeCreateCustomerQueueableTest"
+          },
+          "Coverage": {
+            "coveredLines": [
+              5,
+              6,
+              9,
+              10,
+              11,
+              12,
+              14,
+              15,
+              16,
+              17,
+              21,
+              22,
+              30,
+              33,
+              34,
+              35,
+              36,
+              37,
+              38,
+              39,
+              41,
+              42,
+              44,
+              46,
+              49,
+              50,
+              51,
+              52,
+              53,
+              54,
+              55,
+              56,
+              57,
+              58,
+              59,
+              92,
+              93,
+              94,
+              96,
+              97,
+              98,
+              99,
+              101,
+              102,
+              105,
+              106,
+              109,
+              110,
+              113,
+              116,
+              117
+            ],
+            "uncoveredLines": [
+              18,
+              19,
+              23,
+              24,
+              61,
+              62,
+              65,
+              66,
+              67,
+              68,
+              69,
+              70,
+              71,
+              73,
+              74,
+              75,
+              76,
+              79,
+              80,
+              81,
+              82,
+              83,
+              84,
+              85,
+              86,
+              87,
+              89
+            ]
+          },
+          "TestMethodName": "testCreateStripeCustomerWithInvalidEmail",
+          "NumLinesCovered": 51,
+          "ApexClassOrTrigger": {
+            "Id": "01pWT000002hrfpYAA",
+            "Name": "StripeCreateCustomerQueueable"
+          },
+          "NumLinesUncovered": 27
+        },
+        {
+          "ApexTestClass": {
+            "Id": "07MWT000003PFoZ2AW",
+            "Name": "StripeCreateCustomerQueueableTest"
+          },
+          "Coverage": {
+            "coveredLines": [
+              2,
+              3,
+              8
+            ],
+            "uncoveredLines": []
+          },
+          "TestMethodName": "testCreateStripeCustomerWithInvalidEmail",
+          "NumLinesCovered": 3,
+          "ApexClassOrTrigger": {
+            "Id": "01pWT000002hrHdYAI",
+            "Name": "ContactQueries"
+          },
+          "NumLinesUncovered": 0
+        },
+        {
+          "ApexTestClass": {
+            "Id": "07MWT000003PFoZ2AW",
+            "Name": "StripeCreateCustomerQueueableTest"
+          },
+          "Coverage": {
+            "coveredLines": [
+              2,
+              3
+            ],
+            "uncoveredLines": [
+              4,
+              5
+            ]
+          },
+          "TestMethodName": "testCreateStripeCustomerWithInvalidEmail",
+          "NumLinesCovered": 2,
+          "ApexClassOrTrigger": {
+            "Id": "01qWT000004DbsHYAS",
+            "Name": "Contact"
+          },
+          "NumLinesUncovered": 2
+        },
+        {
+          "ApexTestClass": {
+            "Id": "07MWT000003PFoa2AG",
+            "Name": "StripeCreateCustomerQueueableTest"
+          },
+          "Coverage": {
+            "coveredLines": [
+              2
+            ],
+            "uncoveredLines": [
+              3,
+              8
+            ]
+          },
+          "TestMethodName": "testExtractErrorMessage",
+          "NumLinesCovered": 1,
+          "ApexClassOrTrigger": {
+            "Id": "01pWT000002hrHdYAI",
+            "Name": "ContactQueries"
+          },
+          "NumLinesUncovered": 2
+        },
+        {
+          "ApexTestClass": {
+            "Id": "07MWT000003PFoa2AG",
+            "Name": "StripeCreateCustomerQueueableTest"
+          },
+          "Coverage": {
+            "coveredLines": [
+              2,
+              6
+            ],
+            "uncoveredLines": [
+              3,
+              4,
+              7,
+              8,
+              9,
+              10,
+              11,
+              14,
+              17,
+              18
+            ]
+          },
+          "TestMethodName": "testExtractErrorMessage",
+          "NumLinesCovered": 2,
+          "ApexClassOrTrigger": {
+            "Id": "01pWT000002hoTRYAY",
+            "Name": "ContactTriggerHandler"
+          },
+          "NumLinesUncovered": 10
+        },
+        {
+          "ApexTestClass": {
+            "Id": "07MWT000003PFoa2AG",
+            "Name": "StripeCreateCustomerQueueableTest"
+          },
+          "Coverage": {
+            "coveredLines": [
+              2,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15
+            ],
+            "uncoveredLines": [
+              18,
+              19,
+              20,
+              21,
+              22,
+              23,
+              24
+            ]
+          },
+          "TestMethodName": "testExtractErrorMessage",
+          "NumLinesCovered": 8,
+          "ApexClassOrTrigger": {
+            "Id": "01pWT000002lEj7YAE",
+            "Name": "ErrorLogger"
+          },
+          "NumLinesUncovered": 7
+        },
+        {
+          "ApexTestClass": {
+            "Id": "07MWT000003PFoa2AG",
+            "Name": "StripeCreateCustomerQueueableTest"
+          },
+          "Coverage": {
+            "coveredLines": [
+              5,
+              6,
+              9,
+              33,
+              49,
+              79,
+              80,
+              81,
+              82,
+              83,
+              84,
+              85,
+              86,
+              87,
+              89,
+              92,
+              116
+            ],
+            "uncoveredLines": [
+              10,
+              11,
+              12,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19,
+              21,
+              22,
+              23,
+              24,
+              30,
+              34,
+              35,
+              36,
+              37,
+              38,
+              39,
+              41,
+              42,
+              44,
+              46,
+              50,
+              51,
+              52,
+              53,
+              54,
+              55,
+              56,
+              57,
+              58,
+              59,
+              61,
+              62,
+              65,
+              66,
+              67,
+              68,
+              69,
+              70,
+              71,
+              73,
+              74,
+              75,
+              76,
+              93,
+              94,
+              96,
+              97,
+              98,
+              99,
+              101,
+              102,
+              105,
+              106,
+              109,
+              110,
+              113,
+              117
+            ]
+          },
+          "TestMethodName": "testExtractErrorMessage",
+          "NumLinesCovered": 17,
+          "ApexClassOrTrigger": {
+            "Id": "01pWT000002hrfpYAA",
+            "Name": "StripeCreateCustomerQueueable"
+          },
+          "NumLinesUncovered": 61
+        },
+        {
+          "ApexTestClass": {
+            "Id": "07MWT000003PFoa2AG",
+            "Name": "StripeCreateCustomerQueueableTest"
+          },
+          "Coverage": {
+            "coveredLines": [],
+            "uncoveredLines": [
+              2,
+              3,
+              4,
+              5
+            ]
+          },
+          "TestMethodName": "testExtractErrorMessage",
+          "NumLinesCovered": 0,
+          "ApexClassOrTrigger": {
+            "Id": "01qWT000004DbsHYAS",
+            "Name": "Contact"
+          },
+          "NumLinesUncovered": 4
+        },
+        {
+          "ApexTestClass": {
+            "Id": "07MWT000003PFob2AG",
+            "Name": "StripeCreateCustomerQueueableTest"
+          },
+          "Coverage": {
+            "coveredLines": [
+              5,
+              6,
+              9,
+              10,
+              11,
+              12,
+              14,
+              15,
+              16,
+              17,
+              21,
+              22,
+              23,
+              24,
+              30,
+              33,
+              34,
+              35,
+              36,
+              37,
+              38,
+              39,
+              41,
+              42,
+              44,
+              46,
+              49,
+              50,
+              51,
+              52,
+              53,
+              54,
+              55,
+              56,
+              57,
+              58,
+              59,
+              79,
+              92,
+              93,
+              94,
+              96,
+              97,
+              98,
+              99,
+              101,
+              102,
+              105,
+              106,
+              109,
+              110,
+              113,
+              116,
+              117
+            ],
+            "uncoveredLines": [
+              18,
+              19,
+              61,
+              62,
+              65,
+              66,
+              67,
+              68,
+              69,
+              70,
+              71,
+              73,
+              74,
+              75,
+              76,
+              80,
+              81,
+              82,
+              83,
+              84,
+              85,
+              86,
+              87,
+              89
+            ]
+          },
+          "TestMethodName": "testFindStripeCustomerIdByEmailNotFound",
+          "NumLinesCovered": 54,
+          "ApexClassOrTrigger": {
+            "Id": "01pWT000002hrfpYAA",
+            "Name": "StripeCreateCustomerQueueable"
+          },
+          "NumLinesUncovered": 24
+        },
+        {
+          "ApexTestClass": {
+            "Id": "07MWT000003PFob2AG",
+            "Name": "StripeCreateCustomerQueueableTest"
+          },
+          "Coverage": {
+            "coveredLines": [
+              2,
+              3,
+              4,
+              6,
+              7,
+              8,
+              9,
+              10,
+              14
+            ],
+            "uncoveredLines": [
+              11,
+              17,
+              18
+            ]
+          },
+          "TestMethodName": "testFindStripeCustomerIdByEmailNotFound",
+          "NumLinesCovered": 9,
+          "ApexClassOrTrigger": {
+            "Id": "01pWT000002hoTRYAY",
+            "Name": "ContactTriggerHandler"
+          },
+          "NumLinesUncovered": 3
+        },
+        {
+          "ApexTestClass": {
+            "Id": "07MWT000003PFob2AG",
+            "Name": "StripeCreateCustomerQueueableTest"
+          },
+          "Coverage": {
+            "coveredLines": [
+              2,
+              3,
+              8
+            ],
+            "uncoveredLines": []
+          },
+          "TestMethodName": "testFindStripeCustomerIdByEmailNotFound",
+          "NumLinesCovered": 3,
+          "ApexClassOrTrigger": {
+            "Id": "01pWT000002hrHdYAI",
+            "Name": "ContactQueries"
+          },
+          "NumLinesUncovered": 0
+        },
+        {
+          "ApexTestClass": {
+            "Id": "07MWT000003PFob2AG",
+            "Name": "StripeCreateCustomerQueueableTest"
+          },
+          "Coverage": {
+            "coveredLines": [
+              2
+            ],
+            "uncoveredLines": [
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              18,
+              19,
+              20,
+              21,
+              22,
+              23,
+              24
+            ]
+          },
+          "TestMethodName": "testFindStripeCustomerIdByEmailNotFound",
+          "NumLinesCovered": 1,
+          "ApexClassOrTrigger": {
+            "Id": "01pWT000002lEj7YAE",
+            "Name": "ErrorLogger"
+          },
+          "NumLinesUncovered": 14
+        },
+        {
+          "ApexTestClass": {
+            "Id": "07MWT000003PFob2AG",
+            "Name": "StripeCreateCustomerQueueableTest"
+          },
+          "Coverage": {
+            "coveredLines": [
+              2,
+              3,
+              4,
+              5
+            ],
+            "uncoveredLines": []
+          },
+          "TestMethodName": "testFindStripeCustomerIdByEmailNotFound",
+          "NumLinesCovered": 4,
+          "ApexClassOrTrigger": {
+            "Id": "01qWT000004DbsHYAS",
+            "Name": "Contact"
+          },
+          "NumLinesUncovered": 0
+        },
+        {
+          "ApexTestClass": {
+            "Id": "07MWT000003PFoc2AG",
+            "Name": "StripeCreateCustomerQueueableTest"
+          },
+          "Coverage": {
+            "coveredLines": [
+              2,
+              3
+            ],
+            "uncoveredLines": [
+              4,
+              5
+            ]
+          },
+          "TestMethodName": "testNoAPIResponse",
+          "NumLinesCovered": 2,
+          "ApexClassOrTrigger": {
+            "Id": "01qWT000004DbsHYAS",
+            "Name": "Contact"
+          },
+          "NumLinesUncovered": 2
+        },
+        {
+          "ApexTestClass": {
+            "Id": "07MWT000003PFoc2AG",
+            "Name": "StripeCreateCustomerQueueableTest"
+          },
+          "Coverage": {
+            "coveredLines": [
+              5,
+              6,
+              9,
+              10,
+              11,
+              12,
+              14,
+              15,
+              16,
+              17,
+              21,
+              22,
+              30,
+              33,
+              34,
+              35,
+              36,
+              37,
+              38,
+              39,
+              41,
+              42,
+              44,
+              46,
+              49,
+              50,
+              51,
+              52,
+              53,
+              54,
+              55,
+              56,
+              57,
+              58,
+              59,
+              79,
+              92,
+              93,
+              94,
+              96,
+              97,
+              98,
+              99,
+              101,
+              102,
+              105,
+              106,
+              109,
+              110,
+              113,
+              116,
+              117
+            ],
+            "uncoveredLines": [
+              18,
+              19,
+              23,
+              24,
+              61,
+              62,
+              65,
+              66,
+              67,
+              68,
+              69,
+              70,
+              71,
+              73,
+              74,
+              75,
+              76,
+              80,
+              81,
+              82,
+              83,
+              84,
+              85,
+              86,
+              87,
+              89
+            ]
+          },
+          "TestMethodName": "testNoAPIResponse",
+          "NumLinesCovered": 52,
+          "ApexClassOrTrigger": {
+            "Id": "01pWT000002hrfpYAA",
+            "Name": "StripeCreateCustomerQueueable"
+          },
+          "NumLinesUncovered": 26
+        },
+        {
+          "ApexTestClass": {
+            "Id": "07MWT000003PFoc2AG",
+            "Name": "StripeCreateCustomerQueueableTest"
+          },
+          "Coverage": {
+            "coveredLines": [
+              2
+            ],
+            "uncoveredLines": [
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              18,
+              19,
+              20,
+              21,
+              22,
+              23,
+              24
+            ]
+          },
+          "TestMethodName": "testNoAPIResponse",
+          "NumLinesCovered": 1,
+          "ApexClassOrTrigger": {
+            "Id": "01pWT000002lEj7YAE",
+            "Name": "ErrorLogger"
+          },
+          "NumLinesUncovered": 14
+        },
+        {
+          "ApexTestClass": {
+            "Id": "07MWT000003PFoc2AG",
+            "Name": "StripeCreateCustomerQueueableTest"
+          },
+          "Coverage": {
+            "coveredLines": [
+              2,
+              3,
+              8
+            ],
+            "uncoveredLines": []
+          },
+          "TestMethodName": "testNoAPIResponse",
+          "NumLinesCovered": 3,
+          "ApexClassOrTrigger": {
+            "Id": "01pWT000002hrHdYAI",
+            "Name": "ContactQueries"
+          },
+          "NumLinesUncovered": 0
+        },
+        {
+          "ApexTestClass": {
+            "Id": "07MWT000003PFoc2AG",
+            "Name": "StripeCreateCustomerQueueableTest"
+          },
+          "Coverage": {
+            "coveredLines": [
+              2,
+              3,
+              4,
+              6
+            ],
+            "uncoveredLines": [
+              7,
+              8,
+              9,
+              10,
+              11,
+              14,
+              17,
+              18
+            ]
+          },
+          "TestMethodName": "testNoAPIResponse",
+          "NumLinesCovered": 4,
+          "ApexClassOrTrigger": {
+            "Id": "01pWT000002hoTRYAY",
+            "Name": "ContactTriggerHandler"
+          },
+          "NumLinesUncovered": 8
+        },
+        {
+          "ApexTestClass": {
+            "Id": "07MWT000003PFod2AG",
+            "Name": "StripeCreateCustomerQueueableTest"
+          },
+          "Coverage": {
+            "coveredLines": [
+              2,
+              3,
+              4,
+              6
+            ],
+            "uncoveredLines": [
+              7,
+              8,
+              9,
+              10,
+              11,
+              14,
+              17,
+              18
+            ]
+          },
+          "TestMethodName": "testSkipContactWithExistingStripeId",
+          "NumLinesCovered": 4,
+          "ApexClassOrTrigger": {
+            "Id": "01pWT000002hoTRYAY",
+            "Name": "ContactTriggerHandler"
+          },
+          "NumLinesUncovered": 8
+        },
+        {
+          "ApexTestClass": {
+            "Id": "07MWT000003PFod2AG",
+            "Name": "StripeCreateCustomerQueueableTest"
+          },
+          "Coverage": {
+            "coveredLines": [
+              2,
+              3,
+              8
+            ],
+            "uncoveredLines": []
+          },
+          "TestMethodName": "testSkipContactWithExistingStripeId",
+          "NumLinesCovered": 3,
+          "ApexClassOrTrigger": {
+            "Id": "01pWT000002hrHdYAI",
+            "Name": "ContactQueries"
+          },
+          "NumLinesUncovered": 0
+        },
+        {
+          "ApexTestClass": {
+            "Id": "07MWT000003PFod2AG",
+            "Name": "StripeCreateCustomerQueueableTest"
+          },
+          "Coverage": {
+            "coveredLines": [
+              2,
+              3
+            ],
+            "uncoveredLines": [
+              4,
+              5
+            ]
+          },
+          "TestMethodName": "testSkipContactWithExistingStripeId",
+          "NumLinesCovered": 2,
+          "ApexClassOrTrigger": {
+            "Id": "01qWT000004DbsHYAS",
+            "Name": "Contact"
+          },
+          "NumLinesUncovered": 2
+        },
+        {
+          "ApexTestClass": {
+            "Id": "07MWT000003PFod2AG",
+            "Name": "StripeCreateCustomerQueueableTest"
+          },
+          "Coverage": {
+            "coveredLines": [
+              2
+            ],
+            "uncoveredLines": [
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              18,
+              19,
+              20,
+              21,
+              22,
+              23,
+              24
+            ]
+          },
+          "TestMethodName": "testSkipContactWithExistingStripeId",
+          "NumLinesCovered": 1,
+          "ApexClassOrTrigger": {
+            "Id": "01pWT000002lEj7YAE",
+            "Name": "ErrorLogger"
+          },
+          "NumLinesUncovered": 14
+        },
+        {
+          "ApexTestClass": {
+            "Id": "07MWT000003PFod2AG",
+            "Name": "StripeCreateCustomerQueueableTest"
+          },
+          "Coverage": {
+            "coveredLines": [
+              5,
+              6,
+              9,
+              10,
+              11,
+              12,
+              14,
+              15,
+              30,
+              33,
+              49,
+              79,
+              92,
+              116,
+              117
+            ],
+            "uncoveredLines": [
+              16,
+              17,
+              18,
+              19,
+              21,
+              22,
+              23,
+              24,
+              34,
+              35,
+              36,
+              37,
+              38,
+              39,
+              41,
+              42,
+              44,
+              46,
+              50,
+              51,
+              52,
+              53,
+              54,
+              55,
+              56,
+              57,
+              58,
+              59,
+              61,
+              62,
+              65,
+              66,
+              67,
+              68,
+              69,
+              70,
+              71,
+              73,
+              74,
+              75,
+              76,
+              80,
+              81,
+              82,
+              83,
+              84,
+              85,
+              86,
+              87,
+              89,
+              93,
+              94,
+              96,
+              97,
+              98,
+              99,
+              101,
+              102,
+              105,
+              106,
+              109,
+              110,
+              113
+            ]
+          },
+          "TestMethodName": "testSkipContactWithExistingStripeId",
+          "NumLinesCovered": 15,
+          "ApexClassOrTrigger": {
+            "Id": "01pWT000002hrfpYAA",
+            "Name": "StripeCreateCustomerQueueable"
+          },
+          "NumLinesUncovered": 63
+        },
+        {
+          "ApexTestClass": {
+            "Id": "07MWT000003PFoe2AG",
+            "Name": "StripeCreateCustomerQueueableTest"
+          },
+          "Coverage": {
+            "coveredLines": [
+              2,
+              3
+            ],
+            "uncoveredLines": [
+              4,
+              5
+            ]
+          },
+          "TestMethodName": "testUpdateStripeCustomerSuccess",
+          "NumLinesCovered": 2,
+          "ApexClassOrTrigger": {
+            "Id": "01qWT000004DbsHYAS",
+            "Name": "Contact"
+          },
+          "NumLinesUncovered": 2
+        },
+        {
+          "ApexTestClass": {
+            "Id": "07MWT000003PFoe2AG",
+            "Name": "StripeCreateCustomerQueueableTest"
+          },
+          "Coverage": {
+            "coveredLines": [
+              2
+            ],
+            "uncoveredLines": [
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              18,
+              19,
+              20,
+              21,
+              22,
+              23,
+              24
+            ]
+          },
+          "TestMethodName": "testUpdateStripeCustomerSuccess",
+          "NumLinesCovered": 1,
+          "ApexClassOrTrigger": {
+            "Id": "01pWT000002lEj7YAE",
+            "Name": "ErrorLogger"
+          },
+          "NumLinesUncovered": 14
+        },
+        {
+          "ApexTestClass": {
+            "Id": "07MWT000003PFoe2AG",
+            "Name": "StripeCreateCustomerQueueableTest"
+          },
+          "Coverage": {
+            "coveredLines": [
+              2,
+              3,
+              8
+            ],
+            "uncoveredLines": []
+          },
+          "TestMethodName": "testUpdateStripeCustomerSuccess",
+          "NumLinesCovered": 3,
+          "ApexClassOrTrigger": {
+            "Id": "01pWT000002hrHdYAI",
+            "Name": "ContactQueries"
+          },
+          "NumLinesUncovered": 0
+        },
+        {
+          "ApexTestClass": {
+            "Id": "07MWT000003PFoe2AG",
+            "Name": "StripeCreateCustomerQueueableTest"
+          },
+          "Coverage": {
+            "coveredLines": [
+              2,
+              3,
+              4,
+              6
+            ],
+            "uncoveredLines": [
+              7,
+              8,
+              9,
+              10,
+              11,
+              14,
+              17,
+              18
+            ]
+          },
+          "TestMethodName": "testUpdateStripeCustomerSuccess",
+          "NumLinesCovered": 4,
+          "ApexClassOrTrigger": {
+            "Id": "01pWT000002hoTRYAY",
+            "Name": "ContactTriggerHandler"
+          },
+          "NumLinesUncovered": 8
+        },
+        {
+          "ApexTestClass": {
+            "Id": "07MWT000003PFoe2AG",
+            "Name": "StripeCreateCustomerQueueableTest"
+          },
+          "Coverage": {
+            "coveredLines": [
+              5,
+              6,
+              9,
+              10,
+              11,
+              12,
+              14,
+              15,
+              30,
+              33,
+              49,
+              65,
+              66,
+              67,
+              68,
+              69,
+              70,
+              71,
+              73,
+              74,
+              75,
+              76,
+              79,
+              92,
+              93,
+              94,
+              96,
+              97,
+              98,
+              99,
+              101,
+              102,
+              105,
+              106,
+              109,
+              110,
+              113,
+              116
+            ],
+            "uncoveredLines": [
+              16,
+              17,
+              18,
+              19,
+              21,
+              22,
+              23,
+              24,
+              34,
+              35,
+              36,
+              37,
+              38,
+              39,
+              41,
+              42,
+              44,
+              46,
+              50,
+              51,
+              52,
+              53,
+              54,
+              55,
+              56,
+              57,
+              58,
+              59,
+              61,
+              62,
+              80,
+              81,
+              82,
+              83,
+              84,
+              85,
+              86,
+              87,
+              89,
+              117
+            ]
+          },
+          "TestMethodName": "testUpdateStripeCustomerSuccess",
+          "NumLinesCovered": 38,
+          "ApexClassOrTrigger": {
+            "Id": "01pWT000002hrfpYAA",
+            "Name": "StripeCreateCustomerQueueable"
+          },
+          "NumLinesUncovered": 40
+        },
+        {
+          "ApexTestClass": {
+            "Id": "07MWT000003PFq92AG",
+            "Name": "ContactTriggerHandlerTest"
+          },
+          "Coverage": {
+            "coveredLines": [
+              2,
+              3,
+              4,
+              6,
+              7,
+              8,
+              9,
+              10,
+              14
+            ],
+            "uncoveredLines": [
+              11,
+              17,
+              18
+            ]
+          },
+          "TestMethodName": "testAfterInsertWithValidContacts",
+          "NumLinesCovered": 9,
+          "ApexClassOrTrigger": {
+            "Id": "01pWT000002hoTRYAY",
+            "Name": "ContactTriggerHandler"
+          },
+          "NumLinesUncovered": 3
+        },
+        {
+          "ApexTestClass": {
+            "Id": "07MWT000003PFq92AG",
+            "Name": "ContactTriggerHandlerTest"
+          },
+          "Coverage": {
+            "coveredLines": [
+              2,
+              3,
+              4,
+              5
+            ],
+            "uncoveredLines": []
+          },
+          "TestMethodName": "testAfterInsertWithValidContacts",
+          "NumLinesCovered": 4,
+          "ApexClassOrTrigger": {
+            "Id": "01qWT000004DbsHYAS",
+            "Name": "Contact"
+          },
+          "NumLinesUncovered": 0
+        },
+        {
+          "ApexTestClass": {
+            "Id": "07MWT000003PFq92AG",
+            "Name": "ContactTriggerHandlerTest"
+          },
+          "Coverage": {
+            "coveredLines": [
+              5,
+              6,
+              9,
+              10,
+              11,
+              12,
+              14,
+              15,
+              16,
+              17,
+              21,
+              22,
+              23,
+              24,
+              30,
+              33,
+              34,
+              35,
+              36,
+              37,
+              38,
+              39,
+              41,
+              42,
+              44,
+              46,
+              49,
+              50,
+              51,
+              52,
+              53,
+              54,
+              55,
+              56,
+              57,
+              58,
+              59,
+              92,
+              93,
+              94,
+              96,
+              97,
+              98,
+              99,
+              101,
+              102,
+              105,
+              109,
+              113
+            ],
+            "uncoveredLines": [
+              18,
+              19,
+              61,
+              62,
+              65,
+              66,
+              67,
+              68,
+              69,
+              70,
+              71,
+              73,
+              74,
+              75,
+              76,
+              79,
+              80,
+              81,
+              82,
+              83,
+              84,
+              85,
+              86,
+              87,
+              89,
+              106,
+              110,
+              116,
+              117
+            ]
+          },
+          "TestMethodName": "testAfterInsertWithValidContacts",
+          "NumLinesCovered": 49,
+          "ApexClassOrTrigger": {
+            "Id": "01pWT000002hrfpYAA",
+            "Name": "StripeCreateCustomerQueueable"
+          },
+          "NumLinesUncovered": 29
+        },
+        {
+          "ApexTestClass": {
+            "Id": "07MWT000003PFq92AG",
+            "Name": "ContactTriggerHandlerTest"
+          },
+          "Coverage": {
+            "coveredLines": [
+              2,
+              3,
+              8
+            ],
+            "uncoveredLines": []
+          },
+          "TestMethodName": "testAfterInsertWithValidContacts",
+          "NumLinesCovered": 3,
+          "ApexClassOrTrigger": {
+            "Id": "01pWT000002hrHdYAI",
+            "Name": "ContactQueries"
+          },
+          "NumLinesUncovered": 0
+        },
+        {
+          "ApexTestClass": {
+            "Id": "07MWT000003PFqA2AW",
+            "Name": "ContactTriggerHandlerTest"
+          },
+          "Coverage": {
+            "coveredLines": [
+              2,
+              3,
+              4,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              14
+            ],
+            "uncoveredLines": [
+              17,
+              18
+            ]
+          },
+          "TestMethodName": "testAfterUpdateWithEmailChange",
+          "NumLinesCovered": 10,
+          "ApexClassOrTrigger": {
+            "Id": "01pWT000002hoTRYAY",
+            "Name": "ContactTriggerHandler"
+          },
+          "NumLinesUncovered": 2
+        },
+        {
+          "ApexTestClass": {
+            "Id": "07MWT000003PFqA2AW",
+            "Name": "ContactTriggerHandlerTest"
+          },
+          "Coverage": {
+            "coveredLines": [
+              2,
+              3,
+              4,
+              5
+            ],
+            "uncoveredLines": []
+          },
+          "TestMethodName": "testAfterUpdateWithEmailChange",
+          "NumLinesCovered": 4,
+          "ApexClassOrTrigger": {
+            "Id": "01qWT000004DbsHYAS",
+            "Name": "Contact"
+          },
+          "NumLinesUncovered": 0
+        },
+        {
+          "ApexTestClass": {
+            "Id": "07MWT000003PFqA2AW",
+            "Name": "ContactTriggerHandlerTest"
+          },
+          "Coverage": {
+            "coveredLines": [
+              5,
+              6,
+              9,
+              10,
+              11,
+              12,
+              14,
+              15,
+              16,
+              17,
+              21,
+              22,
+              23,
+              24,
+              30,
+              33,
+              34,
+              35,
+              36,
+              37,
+              38,
+              39,
+              41,
+              42,
+              44,
+              46,
+              49,
+              50,
+              51,
+              52,
+              53,
+              54,
+              55,
+              56,
+              57,
+              58,
+              59,
+              92,
+              93,
+              94,
+              96,
+              97,
+              98,
+              99,
+              101,
+              102,
+              105,
+              109,
+              113
+            ],
+            "uncoveredLines": [
+              18,
+              19,
+              61,
+              62,
+              65,
+              66,
+              67,
+              68,
+              69,
+              70,
+              71,
+              73,
+              74,
+              75,
+              76,
+              79,
+              80,
+              81,
+              82,
+              83,
+              84,
+              85,
+              86,
+              87,
+              89,
+              106,
+              110,
+              116,
+              117
+            ]
+          },
+          "TestMethodName": "testAfterUpdateWithEmailChange",
+          "NumLinesCovered": 49,
+          "ApexClassOrTrigger": {
+            "Id": "01pWT000002hrfpYAA",
+            "Name": "StripeCreateCustomerQueueable"
+          },
+          "NumLinesUncovered": 29
+        },
+        {
+          "ApexTestClass": {
+            "Id": "07MWT000003PFqA2AW",
+            "Name": "ContactTriggerHandlerTest"
+          },
+          "Coverage": {
+            "coveredLines": [
+              2,
+              3,
+              8
+            ],
+            "uncoveredLines": []
+          },
+          "TestMethodName": "testAfterUpdateWithEmailChange",
+          "NumLinesCovered": 3,
+          "ApexClassOrTrigger": {
+            "Id": "01pWT000002hrHdYAI",
+            "Name": "ContactQueries"
+          },
+          "NumLinesUncovered": 0
+        },
+        {
+          "ApexTestClass": {
+            "Id": "07MWT000003PFqB2AW",
+            "Name": "ContactTriggerHandlerTest"
+          },
+          "Coverage": {
+            "coveredLines": [
+              5,
+              6,
+              9,
+              10,
+              11,
+              12,
+              14,
+              15,
+              16,
+              17,
+              21,
+              22,
+              23,
+              24,
+              30,
+              33,
+              34,
+              35,
+              36,
+              37,
+              38,
+              39,
+              41,
+              42,
+              44,
+              46,
+              49,
+              50,
+              51,
+              52,
+              53,
+              54,
+              55,
+              56,
+              57,
+              58,
+              59,
+              92,
+              93,
+              94,
+              96,
+              97,
+              98,
+              99,
+              101,
+              102,
+              105,
+              109,
+              113
+            ],
+            "uncoveredLines": [
+              18,
+              19,
+              61,
+              62,
+              65,
+              66,
+              67,
+              68,
+              69,
+              70,
+              71,
+              73,
+              74,
+              75,
+              76,
+              79,
+              80,
+              81,
+              82,
+              83,
+              84,
+              85,
+              86,
+              87,
+              89,
+              106,
+              110,
+              116,
+              117
+            ]
+          },
+          "TestMethodName": "testAfterUpdateWithoutEmailChange",
+          "NumLinesCovered": 49,
+          "ApexClassOrTrigger": {
+            "Id": "01pWT000002hrfpYAA",
+            "Name": "StripeCreateCustomerQueueable"
+          },
+          "NumLinesUncovered": 29
+        },
+        {
+          "ApexTestClass": {
+            "Id": "07MWT000003PFqB2AW",
+            "Name": "ContactTriggerHandlerTest"
+          },
+          "Coverage": {
+            "coveredLines": [
+              2,
+              3,
+              8
+            ],
+            "uncoveredLines": []
+          },
+          "TestMethodName": "testAfterUpdateWithoutEmailChange",
+          "NumLinesCovered": 3,
+          "ApexClassOrTrigger": {
+            "Id": "01pWT000002hrHdYAI",
+            "Name": "ContactQueries"
+          },
+          "NumLinesUncovered": 0
+        },
+        {
+          "ApexTestClass": {
+            "Id": "07MWT000003PFqB2AW",
+            "Name": "ContactTriggerHandlerTest"
+          },
+          "Coverage": {
+            "coveredLines": [
+              2,
+              3,
+              4,
+              5
+            ],
+            "uncoveredLines": []
+          },
+          "TestMethodName": "testAfterUpdateWithoutEmailChange",
+          "NumLinesCovered": 4,
+          "ApexClassOrTrigger": {
+            "Id": "01qWT000004DbsHYAS",
+            "Name": "Contact"
+          },
+          "NumLinesUncovered": 0
+        },
+        {
+          "ApexTestClass": {
+            "Id": "07MWT000003PFqB2AW",
+            "Name": "ContactTriggerHandlerTest"
+          },
+          "Coverage": {
+            "coveredLines": [
+              2,
+              3,
+              4,
+              6,
+              7,
+              8,
+              9,
+              10,
+              14
+            ],
+            "uncoveredLines": [
+              11,
+              17,
+              18
+            ]
+          },
+          "TestMethodName": "testAfterUpdateWithoutEmailChange",
+          "NumLinesCovered": 9,
+          "ApexClassOrTrigger": {
+            "Id": "01pWT000002hoTRYAY",
+            "Name": "ContactTriggerHandler"
+          },
+          "NumLinesUncovered": 3
+        },
+        {
+          "ApexTestClass": {
+            "Id": "07MWT000003PFqC2AW",
+            "Name": "ContactTriggerHandlerTest"
+          },
+          "Coverage": {
+            "coveredLines": [
+              2,
+              3,
+              4,
+              6,
+              7,
+              8,
+              9,
+              10,
+              14
+            ],
+            "uncoveredLines": [
+              11,
+              17,
+              18
+            ]
+          },
+          "TestMethodName": "testTriggerAfterInsert",
+          "NumLinesCovered": 9,
+          "ApexClassOrTrigger": {
+            "Id": "01pWT000002hoTRYAY",
+            "Name": "ContactTriggerHandler"
+          },
+          "NumLinesUncovered": 3
+        },
+        {
+          "ApexTestClass": {
+            "Id": "07MWT000003PFqC2AW",
+            "Name": "ContactTriggerHandlerTest"
+          },
+          "Coverage": {
+            "coveredLines": [
+              2,
+              3,
+              8
+            ],
+            "uncoveredLines": []
+          },
+          "TestMethodName": "testTriggerAfterInsert",
+          "NumLinesCovered": 3,
+          "ApexClassOrTrigger": {
+            "Id": "01pWT000002hrHdYAI",
+            "Name": "ContactQueries"
+          },
+          "NumLinesUncovered": 0
+        },
+        {
+          "ApexTestClass": {
+            "Id": "07MWT000003PFqC2AW",
+            "Name": "ContactTriggerHandlerTest"
+          },
+          "Coverage": {
+            "coveredLines": [
+              5,
+              6,
+              9,
+              10,
+              11,
+              12,
+              14,
+              15,
+              16,
+              17,
+              21,
+              22,
+              23,
+              24,
+              30,
+              33,
+              34,
+              35,
+              36,
+              37,
+              38,
+              39,
+              41,
+              42,
+              44,
+              46,
+              49,
+              50,
+              51,
+              52,
+              53,
+              54,
+              55,
+              56,
+              57,
+              58,
+              59,
+              92,
+              93,
+              94,
+              96,
+              97,
+              98,
+              99,
+              101,
+              102,
+              105,
+              109,
+              113
+            ],
+            "uncoveredLines": [
+              18,
+              19,
+              61,
+              62,
+              65,
+              66,
+              67,
+              68,
+              69,
+              70,
+              71,
+              73,
+              74,
+              75,
+              76,
+              79,
+              80,
+              81,
+              82,
+              83,
+              84,
+              85,
+              86,
+              87,
+              89,
+              106,
+              110,
+              116,
+              117
+            ]
+          },
+          "TestMethodName": "testTriggerAfterInsert",
+          "NumLinesCovered": 49,
+          "ApexClassOrTrigger": {
+            "Id": "01pWT000002hrfpYAA",
+            "Name": "StripeCreateCustomerQueueable"
+          },
+          "NumLinesUncovered": 29
+        },
+        {
+          "ApexTestClass": {
+            "Id": "07MWT000003PFqC2AW",
+            "Name": "ContactTriggerHandlerTest"
+          },
+          "Coverage": {
+            "coveredLines": [
+              2,
+              3,
+              4,
+              5
+            ],
+            "uncoveredLines": []
+          },
+          "TestMethodName": "testTriggerAfterInsert",
+          "NumLinesCovered": 4,
+          "ApexClassOrTrigger": {
+            "Id": "01qWT000004DbsHYAS",
+            "Name": "Contact"
+          },
+          "NumLinesUncovered": 0
+        },
+        {
+          "ApexTestClass": {
+            "Id": "07MWT000003PFqD2AW",
+            "Name": "ContactTriggerHandlerTest"
+          },
+          "Coverage": {
+            "coveredLines": [
+              5,
+              6,
+              9,
+              10,
+              11,
+              12,
+              14,
+              15,
+              16,
+              17,
+              21,
+              22,
+              23,
+              24,
+              30,
+              33,
+              34,
+              35,
+              36,
+              37,
+              38,
+              39,
+              41,
+              42,
+              44,
+              46,
+              49,
+              50,
+              51,
+              52,
+              53,
+              54,
+              55,
+              56,
+              57,
+              58,
+              59,
+              92,
+              93,
+              94,
+              96,
+              97,
+              98,
+              99,
+              101,
+              102,
+              105,
+              109,
+              113
+            ],
+            "uncoveredLines": [
+              18,
+              19,
+              61,
+              62,
+              65,
+              66,
+              67,
+              68,
+              69,
+              70,
+              71,
+              73,
+              74,
+              75,
+              76,
+              79,
+              80,
+              81,
+              82,
+              83,
+              84,
+              85,
+              86,
+              87,
+              89,
+              106,
+              110,
+              116,
+              117
+            ]
+          },
+          "TestMethodName": "testTriggerAfterUpdateWithEmailChange",
+          "NumLinesCovered": 49,
+          "ApexClassOrTrigger": {
+            "Id": "01pWT000002hrfpYAA",
+            "Name": "StripeCreateCustomerQueueable"
+          },
+          "NumLinesUncovered": 29
+        },
+        {
+          "ApexTestClass": {
+            "Id": "07MWT000003PFqD2AW",
+            "Name": "ContactTriggerHandlerTest"
+          },
+          "Coverage": {
+            "coveredLines": [
+              2,
+              3,
+              8
+            ],
+            "uncoveredLines": []
+          },
+          "TestMethodName": "testTriggerAfterUpdateWithEmailChange",
+          "NumLinesCovered": 3,
+          "ApexClassOrTrigger": {
+            "Id": "01pWT000002hrHdYAI",
+            "Name": "ContactQueries"
+          },
+          "NumLinesUncovered": 0
+        },
+        {
+          "ApexTestClass": {
+            "Id": "07MWT000003PFqD2AW",
+            "Name": "ContactTriggerHandlerTest"
+          },
+          "Coverage": {
+            "coveredLines": [
+              2,
+              3,
+              4,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              14
+            ],
+            "uncoveredLines": [
+              17,
+              18
+            ]
+          },
+          "TestMethodName": "testTriggerAfterUpdateWithEmailChange",
+          "NumLinesCovered": 10,
+          "ApexClassOrTrigger": {
+            "Id": "01pWT000002hoTRYAY",
+            "Name": "ContactTriggerHandler"
+          },
+          "NumLinesUncovered": 2
+        },
+        {
+          "ApexTestClass": {
+            "Id": "07MWT000003PFqD2AW",
+            "Name": "ContactTriggerHandlerTest"
+          },
+          "Coverage": {
+            "coveredLines": [
+              2,
+              3,
+              4,
+              5
+            ],
+            "uncoveredLines": []
+          },
+          "TestMethodName": "testTriggerAfterUpdateWithEmailChange",
+          "NumLinesCovered": 4,
+          "ApexClassOrTrigger": {
+            "Id": "01qWT000004DbsHYAS",
+            "Name": "Contact"
+          },
+          "NumLinesUncovered": 0
+        },
+        {
+          "ApexTestClass": {
+            "Id": "07MWT000003PFqE2AW",
+            "Name": "ContactTriggerHandlerTest"
+          },
+          "Coverage": {
+            "coveredLines": [
+              2,
+              3,
+              4,
+              5
+            ],
+            "uncoveredLines": []
+          },
+          "TestMethodName": "testTriggerAfterUpdateWithoutEmailChange",
+          "NumLinesCovered": 4,
+          "ApexClassOrTrigger": {
+            "Id": "01qWT000004DbsHYAS",
+            "Name": "Contact"
+          },
+          "NumLinesUncovered": 0
+        },
+        {
+          "ApexTestClass": {
+            "Id": "07MWT000003PFqE2AW",
+            "Name": "ContactTriggerHandlerTest"
+          },
+          "Coverage": {
+            "coveredLines": [
+              2,
+              3,
+              4,
+              6,
+              7,
+              8,
+              9,
+              10,
+              14
+            ],
+            "uncoveredLines": [
+              11,
+              17,
+              18
+            ]
+          },
+          "TestMethodName": "testTriggerAfterUpdateWithoutEmailChange",
+          "NumLinesCovered": 9,
+          "ApexClassOrTrigger": {
+            "Id": "01pWT000002hoTRYAY",
+            "Name": "ContactTriggerHandler"
+          },
+          "NumLinesUncovered": 3
+        },
+        {
+          "ApexTestClass": {
+            "Id": "07MWT000003PFqE2AW",
+            "Name": "ContactTriggerHandlerTest"
+          },
+          "Coverage": {
+            "coveredLines": [
+              5,
+              6,
+              9,
+              10,
+              11,
+              12,
+              14,
+              15,
+              16,
+              17,
+              21,
+              22,
+              23,
+              24,
+              30,
+              33,
+              34,
+              35,
+              36,
+              37,
+              38,
+              39,
+              41,
+              42,
+              44,
+              46,
+              49,
+              50,
+              51,
+              52,
+              53,
+              54,
+              55,
+              56,
+              57,
+              58,
+              59,
+              92,
+              93,
+              94,
+              96,
+              97,
+              98,
+              99,
+              101,
+              102,
+              105,
+              109,
+              113
+            ],
+            "uncoveredLines": [
+              18,
+              19,
+              61,
+              62,
+              65,
+              66,
+              67,
+              68,
+              69,
+              70,
+              71,
+              73,
+              74,
+              75,
+              76,
+              79,
+              80,
+              81,
+              82,
+              83,
+              84,
+              85,
+              86,
+              87,
+              89,
+              106,
+              110,
+              116,
+              117
+            ]
+          },
+          "TestMethodName": "testTriggerAfterUpdateWithoutEmailChange",
+          "NumLinesCovered": 49,
+          "ApexClassOrTrigger": {
+            "Id": "01pWT000002hrfpYAA",
+            "Name": "StripeCreateCustomerQueueable"
+          },
+          "NumLinesUncovered": 29
+        },
+        {
+          "ApexTestClass": {
+            "Id": "07MWT000003PFqE2AW",
+            "Name": "ContactTriggerHandlerTest"
+          },
+          "Coverage": {
+            "coveredLines": [
+              2,
+              3,
+              8
+            ],
+            "uncoveredLines": []
+          },
+          "TestMethodName": "testTriggerAfterUpdateWithoutEmailChange",
+          "NumLinesCovered": 3,
+          "ApexClassOrTrigger": {
+            "Id": "01pWT000002hrHdYAI",
+            "Name": "ContactQueries"
+          },
+          "NumLinesUncovered": 0
+        },
+        {
+          "ApexTestClass": {
+            "Id": "07MWT000003PFlJ2AW",
+            "Name": "ErrorLoggerTest"
+          },
+          "Coverage": {
+            "coveredLines": [
+              2,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15
+            ],
+            "uncoveredLines": [
+              18,
+              19,
+              20,
+              21,
+              22,
+              23,
+              24
+            ]
+          },
+          "TestMethodName": "testLogErrorCreatesLogEntry",
+          "NumLinesCovered": 8,
+          "ApexClassOrTrigger": {
+            "Id": "01pWT000002lEj7YAE",
+            "Name": "ErrorLogger"
+          },
+          "NumLinesUncovered": 7
+        },
+        {
+          "ApexTestClass": {
+            "Id": "07MWT000003PFlK2AW",
+            "Name": "ErrorLoggerTest"
+          },
+          "Coverage": {
+            "coveredLines": [
+              2,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              18,
+              19,
+              20,
+              21,
+              22,
+              23,
+              24
+            ],
+            "uncoveredLines": []
+          },
+          "TestMethodName": "testLogErrorWithException",
+          "NumLinesCovered": 15,
+          "ApexClassOrTrigger": {
+            "Id": "01pWT000002lEj7YAE",
+            "Name": "ErrorLogger"
+          },
+          "NumLinesUncovered": 0
+        },
+        {
+          "ApexTestClass": {
+            "Id": "07MWT000003PFrl2AG",
+            "Name": "ErrorLogCleanupBatchTest"
+          },
+          "Coverage": {
+            "coveredLines": [
+              2,
+              3,
+              11,
+              12,
+              15
+            ],
+            "uncoveredLines": []
+          },
+          "TestMethodName": "testErrorLogCleanupBatch",
+          "NumLinesCovered": 5,
+          "ApexClassOrTrigger": {
+            "Id": "01pWT000002lEmLYAU",
+            "Name": "ErrorLogCleanupBatch"
+          },
+          "NumLinesUncovered": 0
+        },
+        {
+          "ApexTestClass": {
+            "Id": "07MWT000003PFmv2AG",
+            "Name": "PaymentLinkQueueableTest"
+          },
+          "Coverage": {
+            "coveredLines": [
+              2,
+              3,
+              8
+            ],
+            "uncoveredLines": []
+          },
+          "TestMethodName": "testGeneratePaymentLinkFailure",
+          "NumLinesCovered": 3,
+          "ApexClassOrTrigger": {
+            "Id": "01pWT000002hrHdYAI",
+            "Name": "ContactQueries"
+          },
+          "NumLinesUncovered": 0
+        },
+        {
+          "ApexTestClass": {
+            "Id": "07MWT000003PFmv2AG",
+            "Name": "PaymentLinkQueueableTest"
+          },
+          "Coverage": {
+            "coveredLines": [
+              5,
+              6,
+              9,
+              10,
+              11,
+              12,
+              14,
+              15,
+              30
+            ],
+            "uncoveredLines": [
+              16,
+              17,
+              18,
+              19,
+              21,
+              22,
+              23,
+              24,
+              33,
+              34,
+              35,
+              36,
+              37,
+              38,
+              39,
+              41,
+              42,
+              44,
+              46,
+              49,
+              50,
+              51,
+              52,
+              53,
+              54,
+              55,
+              56,
+              57,
+              58,
+              59,
+              61,
+              62,
+              65,
+              66,
+              67,
+              68,
+              69,
+              70,
+              71,
+              73,
+              74,
+              75,
+              76,
+              79,
+              80,
+              81,
+              82,
+              83,
+              84,
+              85,
+              86,
+              87,
+              89,
+              92,
+              93,
+              94,
+              96,
+              97,
+              98,
+              99,
+              101,
+              102,
+              105,
+              106,
+              109,
+              110,
+              113,
+              116,
+              117
+            ]
+          },
+          "TestMethodName": "testGeneratePaymentLinkFailure",
+          "NumLinesCovered": 9,
+          "ApexClassOrTrigger": {
+            "Id": "01pWT000002hrfpYAA",
+            "Name": "StripeCreateCustomerQueueable"
+          },
+          "NumLinesUncovered": 69
+        },
+        {
+          "ApexTestClass": {
+            "Id": "07MWT000003PFmv2AG",
+            "Name": "PaymentLinkQueueableTest"
+          },
+          "Coverage": {
+            "coveredLines": [
+              4,
+              5,
+              8,
+              9,
+              12,
+              13,
+              14,
+              15,
+              17,
+              18,
+              19,
+              20,
+              24,
+              25,
+              26,
+              27,
+              28,
+              29,
+              30,
+              35
+            ],
+            "uncoveredLines": [
+              21,
+              22,
+              36,
+              37,
+              38,
+              39,
+              41,
+              42,
+              43,
+              44,
+              45,
+              46
+            ]
+          },
+          "TestMethodName": "testGeneratePaymentLinkFailure",
+          "NumLinesCovered": 20,
+          "ApexClassOrTrigger": {
+            "Id": "01pWT000002hrKrYAI",
+            "Name": "PaymentLinkQueueable"
+          },
+          "NumLinesUncovered": 12
+        },
+        {
+          "ApexTestClass": {
+            "Id": "07MWT000003PFmv2AG",
+            "Name": "PaymentLinkQueueableTest"
+          },
+          "Coverage": {
+            "coveredLines": [
+              2,
+              3,
+              4,
+              6,
+              7,
+              8,
+              9,
+              10,
+              14
+            ],
+            "uncoveredLines": [
+              11,
+              17,
+              18
+            ]
+          },
+          "TestMethodName": "testGeneratePaymentLinkFailure",
+          "NumLinesCovered": 9,
+          "ApexClassOrTrigger": {
+            "Id": "01pWT000002hoTRYAY",
+            "Name": "ContactTriggerHandler"
+          },
+          "NumLinesUncovered": 3
+        },
+        {
+          "ApexTestClass": {
+            "Id": "07MWT000003PFmv2AG",
+            "Name": "PaymentLinkQueueableTest"
+          },
+          "Coverage": {
+            "coveredLines": [
+              2,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15
+            ],
+            "uncoveredLines": [
+              18,
+              19,
+              20,
+              21,
+              22,
+              23,
+              24
+            ]
+          },
+          "TestMethodName": "testGeneratePaymentLinkFailure",
+          "NumLinesCovered": 8,
+          "ApexClassOrTrigger": {
+            "Id": "01pWT000002lEj7YAE",
+            "Name": "ErrorLogger"
+          },
+          "NumLinesUncovered": 7
+        },
+        {
+          "ApexTestClass": {
+            "Id": "07MWT000003PFmv2AG",
+            "Name": "PaymentLinkQueueableTest"
+          },
+          "Coverage": {
+            "coveredLines": [
+              2,
+              3,
+              4,
+              5
+            ],
+            "uncoveredLines": []
+          },
+          "TestMethodName": "testGeneratePaymentLinkFailure",
+          "NumLinesCovered": 4,
+          "ApexClassOrTrigger": {
+            "Id": "01qWT000004DbsHYAS",
+            "Name": "Contact"
+          },
+          "NumLinesUncovered": 0
+        },
+        {
+          "ApexTestClass": {
+            "Id": "07MWT000003PFmv2AG",
+            "Name": "PaymentLinkQueueableTest"
+          },
+          "Coverage": {
+            "coveredLines": [
+              3,
+              4,
+              5,
+              9,
+              18,
+              21,
+              22,
+              25,
+              26,
+              27,
+              28,
+              29,
+              30,
+              32,
+              33,
+              35,
+              36,
+              49,
+              50,
+              52,
+              53,
+              54,
+              55,
+              57,
+              60,
+              61
+            ],
+            "uncoveredLines": [
+              6,
+              10,
+              11,
+              13,
+              14,
+              15,
+              39,
+              40,
+              42,
+              43,
+              46
+            ]
+          },
+          "TestMethodName": "testGeneratePaymentLinkFailure",
+          "NumLinesCovered": 26,
+          "ApexClassOrTrigger": {
+            "Id": "01pWT000002hrJFYAY",
+            "Name": "PaymentLinkCallout"
+          },
+          "NumLinesUncovered": 11
+        },
+        {
+          "ApexTestClass": {
+            "Id": "07MWT000003PFmw2AG",
+            "Name": "PaymentLinkQueueableTest"
+          },
+          "Coverage": {
+            "coveredLines": [
+              5,
+              6,
+              9,
+              10,
+              11,
+              12,
+              14,
+              15,
+              30
+            ],
+            "uncoveredLines": [
+              16,
+              17,
+              18,
+              19,
+              21,
+              22,
+              23,
+              24,
+              33,
+              34,
+              35,
+              36,
+              37,
+              38,
+              39,
+              41,
+              42,
+              44,
+              46,
+              49,
+              50,
+              51,
+              52,
+              53,
+              54,
+              55,
+              56,
+              57,
+              58,
+              59,
+              61,
+              62,
+              65,
+              66,
+              67,
+              68,
+              69,
+              70,
+              71,
+              73,
+              74,
+              75,
+              76,
+              79,
+              80,
+              81,
+              82,
+              83,
+              84,
+              85,
+              86,
+              87,
+              89,
+              92,
+              93,
+              94,
+              96,
+              97,
+              98,
+              99,
+              101,
+              102,
+              105,
+              106,
+              109,
+              110,
+              113,
+              116,
+              117
+            ]
+          },
+          "TestMethodName": "testGeneratePaymentLinkMultipleContacts",
+          "NumLinesCovered": 9,
+          "ApexClassOrTrigger": {
+            "Id": "01pWT000002hrfpYAA",
+            "Name": "StripeCreateCustomerQueueable"
+          },
+          "NumLinesUncovered": 69
+        },
+        {
+          "ApexTestClass": {
+            "Id": "07MWT000003PFmw2AG",
+            "Name": "PaymentLinkQueueableTest"
+          },
+          "Coverage": {
+            "coveredLines": [
+              2,
+              3,
+              8
+            ],
+            "uncoveredLines": []
+          },
+          "TestMethodName": "testGeneratePaymentLinkMultipleContacts",
+          "NumLinesCovered": 3,
+          "ApexClassOrTrigger": {
+            "Id": "01pWT000002hrHdYAI",
+            "Name": "ContactQueries"
+          },
+          "NumLinesUncovered": 0
+        },
+        {
+          "ApexTestClass": {
+            "Id": "07MWT000003PFmw2AG",
+            "Name": "PaymentLinkQueueableTest"
+          },
+          "Coverage": {
+            "coveredLines": [
+              2
+            ],
+            "uncoveredLines": [
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              18,
+              19,
+              20,
+              21,
+              22,
+              23,
+              24
+            ]
+          },
+          "TestMethodName": "testGeneratePaymentLinkMultipleContacts",
+          "NumLinesCovered": 1,
+          "ApexClassOrTrigger": {
+            "Id": "01pWT000002lEj7YAE",
+            "Name": "ErrorLogger"
+          },
+          "NumLinesUncovered": 14
+        },
+        {
+          "ApexTestClass": {
+            "Id": "07MWT000003PFmw2AG",
+            "Name": "PaymentLinkQueueableTest"
+          },
+          "Coverage": {
+            "coveredLines": [
+              4,
+              5,
+              8,
+              9,
+              12,
+              13,
+              14,
+              15,
+              17,
+              18,
+              19,
+              20,
+              21,
+              22,
+              35
+            ],
+            "uncoveredLines": [
+              24,
+              25,
+              26,
+              27,
+              28,
+              29,
+              30,
+              36,
+              37,
+              38,
+              39,
+              41,
+              42,
+              43,
+              44,
+              45,
+              46
+            ]
+          },
+          "TestMethodName": "testGeneratePaymentLinkMultipleContacts",
+          "NumLinesCovered": 15,
+          "ApexClassOrTrigger": {
+            "Id": "01pWT000002hrKrYAI",
+            "Name": "PaymentLinkQueueable"
+          },
+          "NumLinesUncovered": 17
+        },
+        {
+          "ApexTestClass": {
+            "Id": "07MWT000003PFmw2AG",
+            "Name": "PaymentLinkQueueableTest"
+          },
+          "Coverage": {
+            "coveredLines": [
+              2,
+              3,
+              4,
+              5
+            ],
+            "uncoveredLines": []
+          },
+          "TestMethodName": "testGeneratePaymentLinkMultipleContacts",
+          "NumLinesCovered": 4,
+          "ApexClassOrTrigger": {
+            "Id": "01qWT000004DbsHYAS",
+            "Name": "Contact"
+          },
+          "NumLinesUncovered": 0
+        },
+        {
+          "ApexTestClass": {
+            "Id": "07MWT000003PFmw2AG",
+            "Name": "PaymentLinkQueueableTest"
+          },
+          "Coverage": {
+            "coveredLines": [
+              3,
+              4,
+              5,
+              9,
+              18,
+              21,
+              22,
+              25,
+              26,
+              27,
+              28,
+              29,
+              30,
+              32,
+              33,
+              35,
+              39,
+              40,
+              42,
+              46,
+              49,
+              50,
+              52,
+              53,
+              54,
+              55,
+              57,
+              60,
+              61
+            ],
+            "uncoveredLines": [
+              6,
+              10,
+              11,
+              13,
+              14,
+              15,
+              36,
+              43
+            ]
+          },
+          "TestMethodName": "testGeneratePaymentLinkMultipleContacts",
+          "NumLinesCovered": 29,
+          "ApexClassOrTrigger": {
+            "Id": "01pWT000002hrJFYAY",
+            "Name": "PaymentLinkCallout"
+          },
+          "NumLinesUncovered": 8
+        },
+        {
+          "ApexTestClass": {
+            "Id": "07MWT000003PFmw2AG",
+            "Name": "PaymentLinkQueueableTest"
+          },
+          "Coverage": {
+            "coveredLines": [
+              2,
+              3,
+              4,
+              6,
+              7,
+              8,
+              9,
+              10,
+              14
+            ],
+            "uncoveredLines": [
+              11,
+              17,
+              18
+            ]
+          },
+          "TestMethodName": "testGeneratePaymentLinkMultipleContacts",
+          "NumLinesCovered": 9,
+          "ApexClassOrTrigger": {
+            "Id": "01pWT000002hoTRYAY",
+            "Name": "ContactTriggerHandler"
+          },
+          "NumLinesUncovered": 3
+        },
+        {
+          "ApexTestClass": {
+            "Id": "07MWT000003PFmx2AG",
+            "Name": "PaymentLinkQueueableTest"
+          },
+          "Coverage": {
+            "coveredLines": [
+              2,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15
+            ],
+            "uncoveredLines": [
+              18,
+              19,
+              20,
+              21,
+              22,
+              23,
+              24
+            ]
+          },
+          "TestMethodName": "testGeneratePaymentLinkOuterCatchBlock",
+          "NumLinesCovered": 8,
+          "ApexClassOrTrigger": {
+            "Id": "01pWT000002lEj7YAE",
+            "Name": "ErrorLogger"
+          },
+          "NumLinesUncovered": 7
+        },
+        {
+          "ApexTestClass": {
+            "Id": "07MWT000003PFmx2AG",
+            "Name": "PaymentLinkQueueableTest"
+          },
+          "Coverage": {
+            "coveredLines": [
+              2,
+              3,
+              4,
+              6
+            ],
+            "uncoveredLines": [
+              7,
+              8,
+              9,
+              10,
+              11,
+              14,
+              17,
+              18
+            ]
+          },
+          "TestMethodName": "testGeneratePaymentLinkOuterCatchBlock",
+          "NumLinesCovered": 4,
+          "ApexClassOrTrigger": {
+            "Id": "01pWT000002hoTRYAY",
+            "Name": "ContactTriggerHandler"
+          },
+          "NumLinesUncovered": 8
+        },
+        {
+          "ApexTestClass": {
+            "Id": "07MWT000003PFmx2AG",
+            "Name": "PaymentLinkQueueableTest"
+          },
+          "Coverage": {
+            "coveredLines": [
+              2,
+              3,
+              8
+            ],
+            "uncoveredLines": []
+          },
+          "TestMethodName": "testGeneratePaymentLinkOuterCatchBlock",
+          "NumLinesCovered": 3,
+          "ApexClassOrTrigger": {
+            "Id": "01pWT000002hrHdYAI",
+            "Name": "ContactQueries"
+          },
+          "NumLinesUncovered": 0
+        },
+        {
+          "ApexTestClass": {
+            "Id": "07MWT000003PFmx2AG",
+            "Name": "PaymentLinkQueueableTest"
+          },
+          "Coverage": {
+            "coveredLines": [
+              5,
+              6,
+              9,
+              10,
+              11,
+              12,
+              14,
+              15,
+              30
+            ],
+            "uncoveredLines": [
+              16,
+              17,
+              18,
+              19,
+              21,
+              22,
+              23,
+              24,
+              33,
+              34,
+              35,
+              36,
+              37,
+              38,
+              39,
+              41,
+              42,
+              44,
+              46,
+              49,
+              50,
+              51,
+              52,
+              53,
+              54,
+              55,
+              56,
+              57,
+              58,
+              59,
+              61,
+              62,
+              65,
+              66,
+              67,
+              68,
+              69,
+              70,
+              71,
+              73,
+              74,
+              75,
+              76,
+              79,
+              80,
+              81,
+              82,
+              83,
+              84,
+              85,
+              86,
+              87,
+              89,
+              92,
+              93,
+              94,
+              96,
+              97,
+              98,
+              99,
+              101,
+              102,
+              105,
+              106,
+              109,
+              110,
+              113,
+              116,
+              117
+            ]
+          },
+          "TestMethodName": "testGeneratePaymentLinkOuterCatchBlock",
+          "NumLinesCovered": 9,
+          "ApexClassOrTrigger": {
+            "Id": "01pWT000002hrfpYAA",
+            "Name": "StripeCreateCustomerQueueable"
+          },
+          "NumLinesUncovered": 69
+        },
+        {
+          "ApexTestClass": {
+            "Id": "07MWT000003PFmx2AG",
+            "Name": "PaymentLinkQueueableTest"
+          },
+          "Coverage": {
+            "coveredLines": [
+              4,
+              5,
+              8,
+              9,
+              12,
+              13,
+              14,
+              15,
+              17,
+              18,
+              19,
+              20,
+              21,
+              22,
+              35,
+              36,
+              37,
+              38,
+              39,
+              41,
+              42,
+              43,
+              44,
+              45,
+              46
+            ],
+            "uncoveredLines": [
+              24,
+              25,
+              26,
+              27,
+              28,
+              29,
+              30
+            ]
+          },
+          "TestMethodName": "testGeneratePaymentLinkOuterCatchBlock",
+          "NumLinesCovered": 25,
+          "ApexClassOrTrigger": {
+            "Id": "01pWT000002hrKrYAI",
+            "Name": "PaymentLinkQueueable"
+          },
+          "NumLinesUncovered": 7
+        },
+        {
+          "ApexTestClass": {
+            "Id": "07MWT000003PFmx2AG",
+            "Name": "PaymentLinkQueueableTest"
+          },
+          "Coverage": {
+            "coveredLines": [
+              3,
+              4,
+              5,
+              9,
+              18,
+              21,
+              22,
+              25,
+              26,
+              27,
+              28,
+              29,
+              30,
+              32,
+              33,
+              35,
+              39,
+              40,
+              42,
+              46,
+              49,
+              50,
+              52,
+              53,
+              54,
+              55,
+              57,
+              60,
+              61
+            ],
+            "uncoveredLines": [
+              6,
+              10,
+              11,
+              13,
+              14,
+              15,
+              36,
+              43
+            ]
+          },
+          "TestMethodName": "testGeneratePaymentLinkOuterCatchBlock",
+          "NumLinesCovered": 29,
+          "ApexClassOrTrigger": {
+            "Id": "01pWT000002hrJFYAY",
+            "Name": "PaymentLinkCallout"
+          },
+          "NumLinesUncovered": 8
+        },
+        {
+          "ApexTestClass": {
+            "Id": "07MWT000003PFmx2AG",
+            "Name": "PaymentLinkQueueableTest"
+          },
+          "Coverage": {
+            "coveredLines": [
+              2,
+              3
+            ],
+            "uncoveredLines": [
+              4,
+              5
+            ]
+          },
+          "TestMethodName": "testGeneratePaymentLinkOuterCatchBlock",
+          "NumLinesCovered": 2,
+          "ApexClassOrTrigger": {
+            "Id": "01qWT000004DbsHYAS",
+            "Name": "Contact"
+          },
+          "NumLinesUncovered": 2
+        },
+        {
+          "ApexTestClass": {
+            "Id": "07MWT000003PFmy2AG",
+            "Name": "PaymentLinkQueueableTest"
+          },
+          "Coverage": {
+            "coveredLines": [
+              3,
+              4,
+              5,
+              9,
+              18,
+              21,
+              22,
+              25,
+              26,
+              27,
+              28,
+              29,
+              30,
+              32,
+              33,
+              35,
+              39,
+              40,
+              42,
+              46,
+              49,
+              50,
+              52,
+              53,
+              54,
+              55,
+              57,
+              60,
+              61
+            ],
+            "uncoveredLines": [
+              6,
+              10,
+              11,
+              13,
+              14,
+              15,
+              36,
+              43
+            ]
+          },
+          "TestMethodName": "testGeneratePaymentLinkSuccess",
+          "NumLinesCovered": 29,
+          "ApexClassOrTrigger": {
+            "Id": "01pWT000002hrJFYAY",
+            "Name": "PaymentLinkCallout"
+          },
+          "NumLinesUncovered": 8
+        },
+        {
+          "ApexTestClass": {
+            "Id": "07MWT000003PFmy2AG",
+            "Name": "PaymentLinkQueueableTest"
+          },
+          "Coverage": {
+            "coveredLines": [
+              2,
+              3,
+              4,
+              5
+            ],
+            "uncoveredLines": []
+          },
+          "TestMethodName": "testGeneratePaymentLinkSuccess",
+          "NumLinesCovered": 4,
+          "ApexClassOrTrigger": {
+            "Id": "01qWT000004DbsHYAS",
+            "Name": "Contact"
+          },
+          "NumLinesUncovered": 0
+        },
+        {
+          "ApexTestClass": {
+            "Id": "07MWT000003PFmy2AG",
+            "Name": "PaymentLinkQueueableTest"
+          },
+          "Coverage": {
+            "coveredLines": [
+              4,
+              5,
+              8,
+              9,
+              12,
+              13,
+              14,
+              15,
+              17,
+              18,
+              19,
+              20,
+              21,
+              22,
+              35
+            ],
+            "uncoveredLines": [
+              24,
+              25,
+              26,
+              27,
+              28,
+              29,
+              30,
+              36,
+              37,
+              38,
+              39,
+              41,
+              42,
+              43,
+              44,
+              45,
+              46
+            ]
+          },
+          "TestMethodName": "testGeneratePaymentLinkSuccess",
+          "NumLinesCovered": 15,
+          "ApexClassOrTrigger": {
+            "Id": "01pWT000002hrKrYAI",
+            "Name": "PaymentLinkQueueable"
+          },
+          "NumLinesUncovered": 17
+        },
+        {
+          "ApexTestClass": {
+            "Id": "07MWT000003PFmy2AG",
+            "Name": "PaymentLinkQueueableTest"
+          },
+          "Coverage": {
+            "coveredLines": [
+              5,
+              6,
+              9,
+              10,
+              11,
+              12,
+              14,
+              15,
+              30
+            ],
+            "uncoveredLines": [
+              16,
+              17,
+              18,
+              19,
+              21,
+              22,
+              23,
+              24,
+              33,
+              34,
+              35,
+              36,
+              37,
+              38,
+              39,
+              41,
+              42,
+              44,
+              46,
+              49,
+              50,
+              51,
+              52,
+              53,
+              54,
+              55,
+              56,
+              57,
+              58,
+              59,
+              61,
+              62,
+              65,
+              66,
+              67,
+              68,
+              69,
+              70,
+              71,
+              73,
+              74,
+              75,
+              76,
+              79,
+              80,
+              81,
+              82,
+              83,
+              84,
+              85,
+              86,
+              87,
+              89,
+              92,
+              93,
+              94,
+              96,
+              97,
+              98,
+              99,
+              101,
+              102,
+              105,
+              106,
+              109,
+              110,
+              113,
+              116,
+              117
+            ]
+          },
+          "TestMethodName": "testGeneratePaymentLinkSuccess",
+          "NumLinesCovered": 9,
+          "ApexClassOrTrigger": {
+            "Id": "01pWT000002hrfpYAA",
+            "Name": "StripeCreateCustomerQueueable"
+          },
+          "NumLinesUncovered": 69
+        },
+        {
+          "ApexTestClass": {
+            "Id": "07MWT000003PFmy2AG",
+            "Name": "PaymentLinkQueueableTest"
+          },
+          "Coverage": {
+            "coveredLines": [
+              2
+            ],
+            "uncoveredLines": [
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              18,
+              19,
+              20,
+              21,
+              22,
+              23,
+              24
+            ]
+          },
+          "TestMethodName": "testGeneratePaymentLinkSuccess",
+          "NumLinesCovered": 1,
+          "ApexClassOrTrigger": {
+            "Id": "01pWT000002lEj7YAE",
+            "Name": "ErrorLogger"
+          },
+          "NumLinesUncovered": 14
+        },
+        {
+          "ApexTestClass": {
+            "Id": "07MWT000003PFmy2AG",
+            "Name": "PaymentLinkQueueableTest"
+          },
+          "Coverage": {
+            "coveredLines": [
+              2,
+              3,
+              4,
+              6,
+              7,
+              8,
+              9,
+              10,
+              14
+            ],
+            "uncoveredLines": [
+              11,
+              17,
+              18
+            ]
+          },
+          "TestMethodName": "testGeneratePaymentLinkSuccess",
+          "NumLinesCovered": 9,
+          "ApexClassOrTrigger": {
+            "Id": "01pWT000002hoTRYAY",
+            "Name": "ContactTriggerHandler"
+          },
+          "NumLinesUncovered": 3
+        },
+        {
+          "ApexTestClass": {
+            "Id": "07MWT000003PFmy2AG",
+            "Name": "PaymentLinkQueueableTest"
+          },
+          "Coverage": {
+            "coveredLines": [
+              2,
+              3,
+              8
+            ],
+            "uncoveredLines": []
+          },
+          "TestMethodName": "testGeneratePaymentLinkSuccess",
+          "NumLinesCovered": 3,
+          "ApexClassOrTrigger": {
+            "Id": "01pWT000002hrHdYAI",
+            "Name": "ContactQueries"
+          },
+          "NumLinesUncovered": 0
+        },
+        {
+          "ApexTestClass": {
+            "Id": "07MWT000003PFmz2AG",
+            "Name": "PaymentLinkQueueableTest"
+          },
+          "Coverage": {
+            "coveredLines": [
+              2,
+              3,
+              4,
+              5
+            ],
+            "uncoveredLines": []
+          },
+          "TestMethodName": "testGeneratePaymentLinkWithCustomerCreation",
+          "NumLinesCovered": 4,
+          "ApexClassOrTrigger": {
+            "Id": "01qWT000004DbsHYAS",
+            "Name": "Contact"
+          },
+          "NumLinesUncovered": 0
+        },
+        {
+          "ApexTestClass": {
+            "Id": "07MWT000003PFmz2AG",
+            "Name": "PaymentLinkQueueableTest"
+          },
+          "Coverage": {
+            "coveredLines": [
+              3,
+              4,
+              5,
+              9,
+              18,
+              21,
+              22,
+              25,
+              26,
+              27,
+              28,
+              29,
+              30,
+              32,
+              33,
+              35,
+              39,
+              40,
+              42,
+              46,
+              49,
+              50,
+              52,
+              53,
+              54,
+              55,
+              57,
+              60,
+              61
+            ],
+            "uncoveredLines": [
+              6,
+              10,
+              11,
+              13,
+              14,
+              15,
+              36,
+              43
+            ]
+          },
+          "TestMethodName": "testGeneratePaymentLinkWithCustomerCreation",
+          "NumLinesCovered": 29,
+          "ApexClassOrTrigger": {
+            "Id": "01pWT000002hrJFYAY",
+            "Name": "PaymentLinkCallout"
+          },
+          "NumLinesUncovered": 8
+        },
+        {
+          "ApexTestClass": {
+            "Id": "07MWT000003PFmz2AG",
+            "Name": "PaymentLinkQueueableTest"
+          },
+          "Coverage": {
+            "coveredLines": [
+              4,
+              5,
+              8,
+              9,
+              12,
+              13,
+              14,
+              15,
+              17,
+              18,
+              19,
+              20,
+              21,
+              22,
+              35
+            ],
+            "uncoveredLines": [
+              24,
+              25,
+              26,
+              27,
+              28,
+              29,
+              30,
+              36,
+              37,
+              38,
+              39,
+              41,
+              42,
+              43,
+              44,
+              45,
+              46
+            ]
+          },
+          "TestMethodName": "testGeneratePaymentLinkWithCustomerCreation",
+          "NumLinesCovered": 15,
+          "ApexClassOrTrigger": {
+            "Id": "01pWT000002hrKrYAI",
+            "Name": "PaymentLinkQueueable"
+          },
+          "NumLinesUncovered": 17
+        },
+        {
+          "ApexTestClass": {
+            "Id": "07MWT000003PFmz2AG",
+            "Name": "PaymentLinkQueueableTest"
+          },
+          "Coverage": {
+            "coveredLines": [
+              5,
+              6,
+              9,
+              10,
+              11,
+              12,
+              14,
+              15,
+              16,
+              17,
+              21,
+              22,
+              23,
+              24,
+              30,
+              33,
+              34,
+              35,
+              36,
+              37,
+              38,
+              39,
+              41,
+              42,
+              44,
+              46,
+              49,
+              50,
+              51,
+              52,
+              53,
+              54,
+              55,
+              56,
+              57,
+              58,
+              59,
+              92,
+              93,
+              94,
+              96,
+              97,
+              98,
+              99,
+              101,
+              102,
+              105,
+              109,
+              113
+            ],
+            "uncoveredLines": [
+              18,
+              19,
+              61,
+              62,
+              65,
+              66,
+              67,
+              68,
+              69,
+              70,
+              71,
+              73,
+              74,
+              75,
+              76,
+              79,
+              80,
+              81,
+              82,
+              83,
+              84,
+              85,
+              86,
+              87,
+              89,
+              106,
+              110,
+              116,
+              117
+            ]
+          },
+          "TestMethodName": "testGeneratePaymentLinkWithCustomerCreation",
+          "NumLinesCovered": 49,
+          "ApexClassOrTrigger": {
+            "Id": "01pWT000002hrfpYAA",
+            "Name": "StripeCreateCustomerQueueable"
+          },
+          "NumLinesUncovered": 29
+        },
+        {
+          "ApexTestClass": {
+            "Id": "07MWT000003PFmz2AG",
+            "Name": "PaymentLinkQueueableTest"
+          },
+          "Coverage": {
+            "coveredLines": [
+              2
+            ],
+            "uncoveredLines": [
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              18,
+              19,
+              20,
+              21,
+              22,
+              23,
+              24
+            ]
+          },
+          "TestMethodName": "testGeneratePaymentLinkWithCustomerCreation",
+          "NumLinesCovered": 1,
+          "ApexClassOrTrigger": {
+            "Id": "01pWT000002lEj7YAE",
+            "Name": "ErrorLogger"
+          },
+          "NumLinesUncovered": 14
+        },
+        {
+          "ApexTestClass": {
+            "Id": "07MWT000003PFmz2AG",
+            "Name": "PaymentLinkQueueableTest"
+          },
+          "Coverage": {
+            "coveredLines": [
+              2,
+              3,
+              8
+            ],
+            "uncoveredLines": []
+          },
+          "TestMethodName": "testGeneratePaymentLinkWithCustomerCreation",
+          "NumLinesCovered": 3,
+          "ApexClassOrTrigger": {
+            "Id": "01pWT000002hrHdYAI",
+            "Name": "ContactQueries"
+          },
+          "NumLinesUncovered": 0
+        },
+        {
+          "ApexTestClass": {
+            "Id": "07MWT000003PFmz2AG",
+            "Name": "PaymentLinkQueueableTest"
+          },
+          "Coverage": {
+            "coveredLines": [
+              2,
+              3,
+              4,
+              6,
+              7,
+              8,
+              9,
+              10,
+              14
+            ],
+            "uncoveredLines": [
+              11,
+              17,
+              18
+            ]
+          },
+          "TestMethodName": "testGeneratePaymentLinkWithCustomerCreation",
+          "NumLinesCovered": 9,
+          "ApexClassOrTrigger": {
+            "Id": "01pWT000002hoTRYAY",
+            "Name": "ContactTriggerHandler"
+          },
+          "NumLinesUncovered": 3
+        },
+        {
+          "ApexTestClass": {
+            "Id": "07MWT000003PFYQ2A4",
+            "Name": "PaymentLinkCalloutTest"
+          },
+          "Coverage": {
+            "coveredLines": [
+              3,
+              4,
+              5,
+              9,
+              18,
+              21,
+              22,
+              25,
+              26,
+              27,
+              28,
+              29,
+              30,
+              32,
+              33,
+              35,
+              36,
+              49,
+              50,
+              52,
+              53,
+              54,
+              55,
+              57,
+              60,
+              61
+            ],
+            "uncoveredLines": [
+              6,
+              10,
+              11,
+              13,
+              14,
+              15,
+              39,
+              40,
+              42,
+              43,
+              46
+            ]
+          },
+          "TestMethodName": "testGenerateLinkFailure",
+          "NumLinesCovered": 26,
+          "ApexClassOrTrigger": {
+            "Id": "01pWT000002hrJFYAY",
+            "Name": "PaymentLinkCallout"
+          },
+          "NumLinesUncovered": 11
+        },
+        {
+          "ApexTestClass": {
+            "Id": "07MWT000003PFYQ2A4",
+            "Name": "PaymentLinkCalloutTest"
+          },
+          "Coverage": {
+            "coveredLines": [
+              2,
+              3,
+              8
+            ],
+            "uncoveredLines": []
+          },
+          "TestMethodName": "testGenerateLinkFailure",
+          "NumLinesCovered": 3,
+          "ApexClassOrTrigger": {
+            "Id": "01pWT000002hrHdYAI",
+            "Name": "ContactQueries"
+          },
+          "NumLinesUncovered": 0
+        },
+        {
+          "ApexTestClass": {
+            "Id": "07MWT000003PFYQ2A4",
+            "Name": "PaymentLinkCalloutTest"
+          },
+          "Coverage": {
+            "coveredLines": [
+              2,
+              3
+            ],
+            "uncoveredLines": [
+              4,
+              5
+            ]
+          },
+          "TestMethodName": "testGenerateLinkFailure",
+          "NumLinesCovered": 2,
+          "ApexClassOrTrigger": {
+            "Id": "01qWT000004DbsHYAS",
+            "Name": "Contact"
+          },
+          "NumLinesUncovered": 2
+        },
+        {
+          "ApexTestClass": {
+            "Id": "07MWT000003PFYQ2A4",
+            "Name": "PaymentLinkCalloutTest"
+          },
+          "Coverage": {
+            "coveredLines": [
+              2,
+              3,
+              4
+            ],
+            "uncoveredLines": [
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              14,
+              17,
+              18
+            ]
+          },
+          "TestMethodName": "testGenerateLinkFailure",
+          "NumLinesCovered": 3,
+          "ApexClassOrTrigger": {
+            "Id": "01pWT000002hoTRYAY",
+            "Name": "ContactTriggerHandler"
+          },
+          "NumLinesUncovered": 9
+        },
+        {
+          "ApexTestClass": {
+            "Id": "07MWT000003PFYQ2A4",
+            "Name": "PaymentLinkCalloutTest"
+          },
+          "Coverage": {
+            "coveredLines": [
+              5,
+              6,
+              9,
+              10,
+              11,
+              12,
+              14,
+              15,
+              30
+            ],
+            "uncoveredLines": [
+              16,
+              17,
+              18,
+              19,
+              21,
+              22,
+              23,
+              24,
+              33,
+              34,
+              35,
+              36,
+              37,
+              38,
+              39,
+              41,
+              42,
+              44,
+              46,
+              49,
+              50,
+              51,
+              52,
+              53,
+              54,
+              55,
+              56,
+              57,
+              58,
+              59,
+              61,
+              62,
+              65,
+              66,
+              67,
+              68,
+              69,
+              70,
+              71,
+              73,
+              74,
+              75,
+              76,
+              79,
+              80,
+              81,
+              82,
+              83,
+              84,
+              85,
+              86,
+              87,
+              89,
+              92,
+              93,
+              94,
+              96,
+              97,
+              98,
+              99,
+              101,
+              102,
+              105,
+              106,
+              109,
+              110,
+              113,
+              116,
+              117
+            ]
+          },
+          "TestMethodName": "testGenerateLinkFailure",
+          "NumLinesCovered": 9,
+          "ApexClassOrTrigger": {
+            "Id": "01pWT000002hrfpYAA",
+            "Name": "StripeCreateCustomerQueueable"
+          },
+          "NumLinesUncovered": 69
+        },
+        {
+          "ApexTestClass": {
+            "Id": "07MWT000003PFYR2A4",
+            "Name": "PaymentLinkCalloutTest"
+          },
+          "Coverage": {
+            "coveredLines": [
+              2,
+              3,
+              8
+            ],
+            "uncoveredLines": []
+          },
+          "TestMethodName": "testGenerateLinkSuccess",
+          "NumLinesCovered": 3,
+          "ApexClassOrTrigger": {
+            "Id": "01pWT000002hrHdYAI",
+            "Name": "ContactQueries"
+          },
+          "NumLinesUncovered": 0
+        },
+        {
+          "ApexTestClass": {
+            "Id": "07MWT000003PFYR2A4",
+            "Name": "PaymentLinkCalloutTest"
+          },
+          "Coverage": {
+            "coveredLines": [
+              3,
+              4,
+              5,
+              9,
+              18,
+              21,
+              22,
+              25,
+              26,
+              27,
+              28,
+              29,
+              30,
+              32,
+              33,
+              35,
+              39,
+              40,
+              42,
+              46,
+              49,
+              50,
+              52,
+              53,
+              54,
+              55,
+              57,
+              60,
+              61
+            ],
+            "uncoveredLines": [
+              6,
+              10,
+              11,
+              13,
+              14,
+              15,
+              36,
+              43
+            ]
+          },
+          "TestMethodName": "testGenerateLinkSuccess",
+          "NumLinesCovered": 29,
+          "ApexClassOrTrigger": {
+            "Id": "01pWT000002hrJFYAY",
+            "Name": "PaymentLinkCallout"
+          },
+          "NumLinesUncovered": 8
+        },
+        {
+          "ApexTestClass": {
+            "Id": "07MWT000003PFYR2A4",
+            "Name": "PaymentLinkCalloutTest"
+          },
+          "Coverage": {
+            "coveredLines": [
+              2,
+              3,
+              4
+            ],
+            "uncoveredLines": [
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              14,
+              17,
+              18
+            ]
+          },
+          "TestMethodName": "testGenerateLinkSuccess",
+          "NumLinesCovered": 3,
+          "ApexClassOrTrigger": {
+            "Id": "01pWT000002hoTRYAY",
+            "Name": "ContactTriggerHandler"
+          },
+          "NumLinesUncovered": 9
+        },
+        {
+          "ApexTestClass": {
+            "Id": "07MWT000003PFYR2A4",
+            "Name": "PaymentLinkCalloutTest"
+          },
+          "Coverage": {
+            "coveredLines": [
+              2,
+              3
+            ],
+            "uncoveredLines": [
+              4,
+              5
+            ]
+          },
+          "TestMethodName": "testGenerateLinkSuccess",
+          "NumLinesCovered": 2,
+          "ApexClassOrTrigger": {
+            "Id": "01qWT000004DbsHYAS",
+            "Name": "Contact"
+          },
+          "NumLinesUncovered": 2
+        },
+        {
+          "ApexTestClass": {
+            "Id": "07MWT000003PFYR2A4",
+            "Name": "PaymentLinkCalloutTest"
+          },
+          "Coverage": {
+            "coveredLines": [
+              5,
+              6,
+              9,
+              10,
+              11,
+              12,
+              14,
+              15,
+              30
+            ],
+            "uncoveredLines": [
+              16,
+              17,
+              18,
+              19,
+              21,
+              22,
+              23,
+              24,
+              33,
+              34,
+              35,
+              36,
+              37,
+              38,
+              39,
+              41,
+              42,
+              44,
+              46,
+              49,
+              50,
+              51,
+              52,
+              53,
+              54,
+              55,
+              56,
+              57,
+              58,
+              59,
+              61,
+              62,
+              65,
+              66,
+              67,
+              68,
+              69,
+              70,
+              71,
+              73,
+              74,
+              75,
+              76,
+              79,
+              80,
+              81,
+              82,
+              83,
+              84,
+              85,
+              86,
+              87,
+              89,
+              92,
+              93,
+              94,
+              96,
+              97,
+              98,
+              99,
+              101,
+              102,
+              105,
+              106,
+              109,
+              110,
+              113,
+              116,
+              117
+            ]
+          },
+          "TestMethodName": "testGenerateLinkSuccess",
+          "NumLinesCovered": 9,
+          "ApexClassOrTrigger": {
+            "Id": "01pWT000002hrfpYAA",
+            "Name": "StripeCreateCustomerQueueable"
+          },
+          "NumLinesUncovered": 69
+        }
+      ],
+      "summary": {
+        "totalLines": 186,
+        "coveredLines": 177,
+        "orgWideCoverage": "40%",
+        "testRunCoverage": "95%"
+      }
+    }
+  }
+}

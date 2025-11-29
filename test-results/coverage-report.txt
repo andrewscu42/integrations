@@ -1,0 +1,37 @@
+================================================================================
+APEX CODE COVERAGE REPORT
+================================================================================
+
+Class: Contact
+  Coverage: 100% (4/4 lines)
+
+Class: ContactQueries
+  Coverage: 100% (3/3 lines)
+
+Class: ContactTriggerHandler
+  Coverage: 83% (10/12 lines)
+  Uncovered Lines: [17, 18]
+
+Class: ErrorLogCleanupBatch
+  Coverage: 100% (5/5 lines)
+
+Class: ErrorLogger
+  Coverage: 100% (15/15 lines)
+
+Class: PaymentLinkCallout
+  Coverage: 81% (30/37 lines)
+  Uncovered Lines: [6, 10, 11, 13, 14, 15, 43]
+
+Class: PaymentLinkQueueable
+  Coverage: 100% (32/32 lines)
+
+Class: StripeCreateCustomerQueueable
+  Coverage: 100% (78/78 lines)
+
+================================================================================
+SUMMARY
+================================================================================
+Tests Ran: 24
+Pass Rate: 100%
+Org Wide Coverage: 40%
+Test Run Coverage: 95%
