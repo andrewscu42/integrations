@@ -1,10 +1,3 @@
-/** 
- * @description       : Use Queueable to create Stripe customers with minimal fields
- *  to reduce payload size. 
- *
- * @author            : Andrew Scullion
-**/
-
 public class StripeCreateCustomerQueueable implements Queueable, Database.AllowsCallouts {
     
     private Set<Id> contactIds;
@@ -20,9 +13,17 @@ public class StripeCreateCustomerQueueable implements Queueable, Database.Allows
         
         for (Contact contact : contacts) {
             if (contact.Stripe_Customer_ID__c == null && contact.Email != null) {
-                String stripeCustomerId = createStripeCustomer(contact);
-                contact.Stripe_Customer_ID__c = stripeCustomerId;
-                contactsToUpdate.add(contact);
+                String existingCustomerId = findStripeCustomerIdByEmail(contact.Email);
+                if (existingCustomerId != null) {
+                    contact.Stripe_Customer_ID__c = existingCustomerId;
+                    contactsToUpdate.add(contact);
+                } else {
+                    String stripeCustomerId = createStripeCustomer(contact);
+                    if (stripeCustomerId != null) {
+                        contact.Stripe_Customer_ID__c = stripeCustomerId;
+                        contactsToUpdate.add(contact);
+                    }
+                }
             }
         }
         
@@ -61,7 +62,7 @@ public class StripeCreateCustomerQueueable implements Queueable, Database.Allows
         return (String) customer.get('id');
     }
     
-    private String updateStripeCustomer(String stripeCustomerId, Contact contact) {
+    public String updateStripeCustomer(String stripeCustomerId, Contact contact) {
         String body = buildRequestBody(contact);
         HttpRequest request = new HttpRequest();
         request.setEndpoint('callout:Stripe_API/v1/customers/' + stripeCustomerId);
@@ -75,14 +76,17 @@ public class StripeCreateCustomerQueueable implements Queueable, Database.Allows
         return (String) responseMap.get('id');
     }
     
-    private String extractErrorMessage(Map<String, Object> responseMap, Integer statusCode) {
+    public String extractErrorMessage(Map<String, Object> responseMap, Integer statusCode) {
         Map<String, Object> error = (Map<String, Object>) responseMap.get('error');
-        if (error != null) {
-            String message = (String) error.get('message');
-            String type = (String) error.get('type');
-            return String.format('Status {0}: {1} ({2})', new List<Object>{statusCode, message, type});
-        }
-        return 'Status ' + statusCode;
+        String message = 'Status ' + statusCode + ': ' + (String)error.get('message') + ' (' + (String)error.get('type') + ')';
+        ErrorLogger.logError(
+            message,
+            null,
+            'Queueable',
+            'StripeCreateCustomerQueueable',
+            JSON.serialize(error)
+        );
+        return message;
     }
     
     private String buildRequestBody(Contact contact) {

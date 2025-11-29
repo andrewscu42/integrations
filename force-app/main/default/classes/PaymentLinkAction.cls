@@ -30,6 +30,13 @@ public class PaymentLinkAction {
                 response.message = 'Payment link generation queued successfully';
                 response.isSuccess = true;
             } catch (Exception e) {
+                ErrorLogger.logError(
+                    e.getMessage(),
+                    'Payment link generation failed',
+                    'Flow',
+                    'PaymentLinkAction',
+                    e.getStackTraceString()
+                );
                 response.message = 'Error: ' + e.getMessage();
                 response.isSuccess = false;
             }
